@@ -1,0 +1,67 @@
+Command: ninja flash
+[1/5] cd /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/esp-idf/esptool_py && /Users/thibaultbougard/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/thibaultbougard/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/partition_table/partition-table.bin /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/SHS01_Enhanced.bin
+SHS01_Enhanced.bin binary size 0x9ca30 bytes. Smallest app partition is 0xe1000 bytes. 0x445d0 bytes (30%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/bootloader/esp-idf/esptool_py && /Users/thibaultbougard/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/thibaultbougard/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/bootloader/bootloader.bin
+Bootloader binary size 0x57e0 bytes. 0x2820 bytes (31%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /Users/thibaultbougard/esp/v5.5.1/esp-idf/components/esptool_py && /Users/thibaultbougard/.espressif/tools/cmake/3.30.2/CMake.app/Contents/bin/cmake -D IDF_PATH=/Users/thibaultbougard/esp/v5.5.1/esp-idf -D "SERIAL_TOOL=/Users/thibaultbougard/.espressif/python_env/idf5.5_py3.9_env/bin/python;;/Users/thibaultbougard/esp/v5.5.1/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c6" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build -P /Users/thibaultbougard/esp/v5.5.1/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32c6 -p /dev/tty.usbmodem5A7A0486211 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 SHS01_Enhanced.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.11.dev1
+Serial port /dev/tty.usbmodem5A7A0486211
+Connecting....
+Chip is ESP32-C6 (QFN40) (revision v0.2)
+Features: Wi-Fi 6, BT 5 (LE), IEEE802.15.4, Single Core + LP Core, 160MHz, Unknown Embedded Flash
+Crystal is 40MHz
+MAC: a0:85:e3:ff:fe:dc:f6:d4
+BASE MAC: a0:85:e3:dc:f6:d4
+MAC_EXT: ff:fe
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000acfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 22496 bytes to 13913...
+Writing at 0x00000000... (100 %)
+Wrote 22496 bytes (13913 compressed) at 0x00000000 in 0.6 seconds (effective 294.2 kbit/s)...
+Hash of data verified.
+Compressed 641584 bytes to 378250...
+Writing at 0x00010000... (4 %)
+Writing at 0x0001db51... (8 %)
+Writing at 0x00024b4e... (12 %)
+Writing at 0x0002b3f2... (16 %)
+Writing at 0x00032b29... (20 %)
+Writing at 0x0003a5de... (25 %)
+Writing at 0x00040264... (29 %)
+Writing at 0x000463eb... (33 %)
+Writing at 0x0004bdd8... (37 %)
+Writing at 0x00051b6c... (41 %)
+Writing at 0x00057954... (45 %)
+Writing at 0x0005db8d... (50 %)
+Writing at 0x000639ea... (54 %)
+Writing at 0x0006abc7... (58 %)
+Writing at 0x00070d10... (62 %)
+Writing at 0x00076b37... (66 %)
+Writing at 0x0007cad7... (70 %)
+Writing at 0x00082c58... (75 %)
+Writing at 0x000895c8... (79 %)
+Writing at 0x000907f2... (83 %)
+Writing at 0x00096a98... (87 %)
+Writing at 0x0009ce53... (91 %)
+Writing at 0x000a3e8a... (95 %)
+Writing at 0x000abd40... (100 %)
+Wrote 641584 bytes (378250 compressed) at 0x00010000 in 9.2 seconds (effective 556.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 136...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (136 compressed) at 0x00008000 in 0.0 seconds (effective 527.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

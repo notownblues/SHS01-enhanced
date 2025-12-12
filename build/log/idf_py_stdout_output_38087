@@ -1,0 +1,126 @@
+Command: /Users/thibaultbougard/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/thibaultbougard/esp/v5.5.1/esp-idf/tools/idf_monitor.py -p /dev/tty.usbmodem5A7A0486211 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/SHS01_Enhanced.elf /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/bootloader/bootloader.elf -m '/Users/thibaultbougard/.espressif/python_env/idf5.5_py3.9_env/bin/python' '/Users/thibaultbougard/esp/v5.5.1/esp-idf/tools/idf.py' '-p' '/dev/tty.usbmodem5A7A0486211'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec 12 2025 18:18:47[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (44) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 000e1000[0m
+[0;32mI (72) boot:  3 zb_storage       Unknown data     01 81 000f1000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 000f5000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42078020 size=1116ch ( 69996) map[0m
+[0;32mI (109) esp_image: segment 1: paddr=00021194 vaddr=40800000 size=06e84h ( 28292) load[0m
+[0;32mI (116) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=77840h (489536) map[0m
+[0;32mI (208) esp_image: segment 3: paddr=0009f868 vaddr=40806e84 size=0d3ach ( 54188) load[0m
+[0;32mI (224) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (225) boot: Disabling RNG early entropy source...[0m
+[0;32mI (235) cpu_start: Unicore app[0m
+[0;32mI (243) cpu_start: Pro cpu start user code[0m
+[0;32mI (243) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (243) app_init: Application information:[0m
+[0;32mI (244) app_init: Project name:     SHS01_Enhanced[0m
+[0;32mI (248) app_init: App version:      1[0m
+[0;32mI (251) app_init: Compile time:     Dec 12 2025 18:18:21[0m
+[0;32mI (256) app_init: ELF file SHA256:  749c12ade...[0m
+[0;32mI (260) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (265) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (269) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (273) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (276) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (283) heap_init: At 408193B0 len 00063260 (396 KiB): RAM[0m
+[0;32mI (288) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (293) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (299) spi_flash: detected chip: gd[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;33mW (305) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (317) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (323) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (330) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (349) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (349) main_task: Started on CPU0[0m
+[0;32mI (349) main_task: Calling app_main()[0m
+[0;32mI (349) SHS01: NVS loaded: mv_cd=30s, occ_cd=15s, mv_sens=60, st_sens=80, mv_gate=5, st_gate=6, eng=0[0m
+[0;32mI (359) LD2410: LD2410 driver initialized[0m
+[0;32mI (459) SHS01: Static Target -> DETECTED[0m
+[0;32mI (459) SHS01: Occupancy -> DETECTED[0m
+[0;32mI (499) LD2410: Set max gates: moving=5, static=6, timeout=15s[0m
+[0;32mI (569) LD2410: Set all gates sensitivity: move=60, still=80[0m
+[0;32mI (589) LD2410: Moving cooldown set to 30 seconds[0m
+[0;32mI (589) LD2410: Occupancy clear delay set to 15 seconds[0m
+[0;32mI (629) LD2410: Firmware: V2.68.25070917[0m
+[0;32mI (699) LD2410: Config read: max_move=5, max_static=6, timeout=15[0m
+[0;32mI (719) SHS01: LD2410 processing task started[0m
+[0;32mI (719) SHS01: BOOT long-press enabled on GPIO9 (hold 6000 ms to factory reset)[0m
+[0;32mI (719) phy_init: phy_version 341,a6c8fe6,Jul 30 2025,18:34:11[0m
+[0;32mI (779) SHS01: Moving Target -> DETECTED[0m
+[0;32mI (799) phy: libbtbb version: a945109, Jul 30 2025, 18:34:25[0m
+[0;32mI (809) SHS01: Enhanced SHS01 firmware started[0m
+[0;32mI (809) main_task: Returned from app_main()[0m
+[0;32mI (819) SHS01: ZDO signal: ZDO Config Ready (0x17), status: ESP_FAIL[0m
+[0;32mI (819) SHS01: Initialize Zigbee stack[0m
+[0;32mI (819) SHS01: ZDO signal: NWK Permit Join (0x36), status: ESP_OK[0m
+[0;32mI (829) SHS01: Device started up in non factory-reset mode[0m
+[0;32mI (829) SHS01: Device rebooted[0m
+[0;32mI (97579) SHS01: Static Target -> CLEAR[0m
+[0;32mI (97679) SHS01: Static Target -> DETECTED[0m
+[0;32mI (121479) SHS01: Static Target -> CLEAR[0m
+[0;32mI (121579) SHS01: Static Target -> DETECTED[0m
+[0;32mI (180599) SHS01: ZDO signal: NWK Permit Join (0x36), status: ESP_OK[0m
+[0;32mI (213679) SHS01: Static Target -> CLEAR[0m
+[0;32mI (214279) SHS01: Static Target -> DETECTED[0m
+[0;32mI (215759) SHS01: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (292059) LD2410: Set max gates: moving=5, static=6, timeout=15s[0m
+[0;32mI (292079) SHS01: Set Occupancy Cooldown = 15s[0m
+[0;32mI (300379) SHS01: Static Target -> CLEAR[0m
+[0;32mI (300679) SHS01: Static Target -> DETECTED[0m
+[0;32mI (360079) SHS01: Static Target -> CLEAR[0m
+[0;32mI (360179) SHS01: Static Target -> DETECTED[0m
+[0;32mI (392279) SHS01: Static Target -> CLEAR[0m
+[0;32mI (392299) SHS01: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (571479) SHS01: Static Target -> DETECTED[0m
+[0;32mI (571579) SHS01: Static Target -> CLEAR[0m
+[0;32mI (571679) SHS01: Static Target -> DETECTED[0m
+[0;32mI (575579) SHS01: Static Target -> CLEAR[0m
+[0;32mI (575679) SHS01: Static Target -> DETECTED[0m
+[0;32mI (577279) SHS01: Static Target -> CLEAR[0m
+[0;32mI (577479) SHS01: Static Target -> DETECTED[0m
+[0;32mI (578679) SHS01: Static Target -> CLEAR[0m
+[0;32mI (578779) SHS01: Static Target -> DETECTED[0m
+[0;32mI (590779) SHS01: Static Target -> CLEAR[0m
+[0;32mI (590979) SHS01: Static Target -> DETECTED[0m
+[0;32mI (597679) SHS01: Static Target -> CLEAR[0m
+[0;32mI (597779) SHS01: Static Target -> DETECTED[0m
+[0;32mI (597879) SHS01: Static Target -> CLEAR[0m
+[0;32mI (597979) SHS01: Static Target -> DETECTED[0m
+[0;32mI (601879) SHS01: Static Target -> CLEAR[0m
+[0;32mI (601979) SHS01: Static Target -> DETECTED[0m
+[0;32mI (602279) SHS01: Static Target -> CLEAR[0m
+[0;32mI (602379) SHS01: Static Target -> DETECTED[0m
+[0;32mI (606379) SHS01: Static Target -> CLEAR[0m
+[0;32mI (606479) SHS01: Static Target -> DETECTED[0m
+[0;32mI (606579) SHS01: Static Target -> CLEAR[0m
+[0;32mI (606679) SHS01: Static Target -> DETECTED[0m
+[0;32mI (607379) SHS01: Static Target -> CLEAR[0m
+[0;32mI (607579) SHS01: Static Target -> DETECTED[0m
+[0;32mI (611479) SHS01: Static Target -> CLEAR[0m
+[0;32mI (611579) SHS01: Static Target -> DETECTED[0m
+[0;32mI (611679) SHS01: Static Target -> CLEAR[0m
+[0;32mI (611779) SHS01: Static Target -> DETECTED[0m
+[0;32mI (625379) SHS01: Static Target -> CLEAR[0m
+[0;32mI (625579) SHS01: Static Targ

@@ -1,0 +1,324 @@
+Command: /Users/thibaultbougard/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/thibaultbougard/esp/v5.5.1/esp-idf/tools/idf_monitor.py -p /dev/tty.usbmodem5A7A0486211 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/SHS01_Enhanced.elf /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/bootloader/bootloader.elf -m '/Users/thibaultbougard/.espressif/python_env/idf5.5_py3.9_env/bin/python' '/Users/thibaultbougard/esp/v5.5.1/esp-idf/tools/idf.py' '-p' '/dev/tty.usbmodem5A7A0486211'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec 12 2025 18:18:47[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (44) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 000e1000[0m
+[0;32mI (72) boot:  3 zb_storage       Unknown data     01 81 000f1000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 000f5000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42080020 size=11574h ( 71028) map[0m
+[0;32mI (109) esp_image: segment 1: paddr=0002159c vaddr=40800000 size=06a7ch ( 27260) load[0m
+[0;32mI (116) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=78114h (491796) map[0m
+[0;32mI (209) esp_image: segment 3: paddr=000a013c vaddr=40806a7c size=0d7b4h ( 55220) load[0m
+[0;32mI (225) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (225) boot: Disabling RNG early entropy source...[0m
+[0;32mI (235) cpu_start: Unicore app[0m
+[0;32mI (244) cpu_start: Pro cpu start user code[0m
+[0;32mI (244) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (244) app_init: Application information:[0m
+[0;32mI (244) app_init: Project name:     SHS01_Enhanced[0m
+[0;32mI (248) app_init: App version:      1[0m
+[0;32mI (252) app_init: Compile time:     Dec 12 2025 18:18:21[0m
+[0;32mI (257) app_init: ELF file SHA256:  68943f99d...[0m
+[0;32mI (261) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (265) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (269) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (273) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (277) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (283) heap_init: At 408193C0 len 00063250 (396 KiB): RAM[0m
+[0;32mI (289) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (294) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (300) spi_flash: detected chip: gd[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;33mW (305) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (318) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (324) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (330) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (349) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (350) main_task: Started on CPU0[0m
+[0;32mI (350) main_task: Calling app_main()[0m
+[0;32mI (350) SHS01: NVS loaded: mv_cd=15s, occ_cd=15s, mv_sens=50, st_sens=50, mv_gate=5, st_gate=6, eng=1[0m
+[0;32mI (360) LD2410: LD2410 driver initialized[0m
+[0;32mI (460) SHS01: Applying LD2410 configuration...[0m
+[0;32mI (460) SHS01: First data: move=0cm/0, static=0cm/0, detect=0cm[0m
+[0;32mI (460) SHS01: === FIRST GATE DATA RECEIVED ===[0m
+[0;32mI (460) SHS01: max_mv=8 max_st=8[0m
+[0;32mI (460) SHS01: G0=13/0 G1=9/0 G2=8/25 G3=6/12 G4=2/7[0m
+[0;32mI (470) SHS01: All gate values set in Zigbee attributes[0m
+[0;32mI (510) LD2410: Set max gates: moving=5, static=6, timeout=15s[0m
+[0;32mI (530) SHS01: Set max gates: mv=5 st=6 timeout=15 -> OK[0m
+[0;32mI (570) LD2410: Set all gates sensitivity: move=50, still=50[0m
+[0;32mI (590) SHS01: Set sensitivity: mv=50 st=50 -> OK[0m
+[0;32mI (590) LD2410: Moving cooldown set to 15 seconds[0m
+[0;32mI (590) LD2410: Occupancy clear delay set to 15 seconds[0m
+[0;32mI (590) LD2410: Enabling engineering mode...[0m
+[0;32mI (640) LD2410: Engineering mode ENABLED successfully[0m
+[0;32mI (660) SHS01: Enable engineering mode -> OK[0m
+[0;32mI (800) LD2410: Firmware: V2.68.25070917[0m
+[0;32mI (820) SHS01: Firmware: V2.68[0m
+[0;32mI (860) LD2410: Config read: max_move=5, max_static=6, timeout=15[0m
+[0;32mI (880) SHS01: Read config -> OK[0m
+[0;32mI (880) SHS01: LD2410 configuration complete[0m
+[0;32mI (880) SHS01: LD2410 processing task started[0m
+[0;32mI (880) SHS01: BOOT long-press enabled on GPIO9 (hold 6000 ms to factory reset)[0m
+[0;32mI (880) phy_init: phy_version 341,a6c8fe6,Jul 30 2025,18:34:11[0m
+[0;32mI (970) phy: libbtbb version: a945109, Jul 30 2025, 18:34:25[0m
+[0;32mI (990) SHS01: Enhanced SHS01 firmware started[0m
+[0;32mI (990) main_task: Returned from app_main()[0m
+[0;32mI (1000) SHS01: ZDO signal: ZDO Config Ready (0x17), status: ESP_FAIL[0m
+[0;32mI (1000) SHS01: Initialize Zigbee stack[0m
+[0;32mI (1000) SHS01: ZDO signal: NWK Permit Join (0x36), status: ESP_OK[0m
+[0;32mI (1000) SHS01: Device started up in non factory-reset mode[0m
+[0;32mI (1010) SHS01: Device rebooted[0m
+[0;32mI (6420) SHS01: ZDO signal: NWK Permit Join (0x36), status: ESP_OK[0m
+[0;32mI (10560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (12160) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=27[0m
+[0;32mI (16660) SHS01: Moving Target -> DETECTED (raw=1, dist=30cm, energy=57)[0m
+[0;32mI (16660) SHS01: Occupancy -> DETECTED (mv=1 st=0)[0m
+[0;32mI (16760) SHS01: Static Target -> DETECTED (dist=30cm, energy=32)[0m
+[0;32mI (17460) SHS01: Static Target -> CLEAR (dist=30cm, energy=36)[0m
+[0;32mI (17560) SHS01: Static Target -> DETECTED (dist=30cm, energy=35)[0m
+[0;32mI (20560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (21160) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=30 mv_e=0 st_d=30 st_e=45[0m
+[0;32mI (30560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (30760) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=30 mv_e=0 st_d=30 st_e=43[0m
+[0;32mI (32460) SHS01: Moving Target -> CLEAR (raw=0, dist=30cm, energy=0)[0m
+[0;32mI (35660) SHS01: Moving Target -> DETECTED (raw=1, dist=43cm, energy=100)[0m
+[0;32mI (35660) SHS01: Static Target -> CLEAR (dist=30cm, energy=70)[0m
+[0;32mI (35760) SHS01: Static Target -> DETECTED (dist=43cm, energy=100)[0m
+[0;32mI (40560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (44360) SHS01: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (50560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (52160) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=30 mv_e=0 st_d=30 st_e=87[0m
+[0;32mI (60160) SHS01: Moving Target -> CLEAR (raw=0, dist=30cm, energy=0)[0m
+[0;32mI (60560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (64460) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=30 mv_e=0 st_d=30 st_e=19[0m
+[0;32mI (68160) SHS01: Static Target -> CLEAR (dist=30cm, energy=11)[0m
+[0;32mI (68160) SHS01: Occupancy -> CLEAR (mv=0 st=0)[0m
+[0;32mI (70560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (74160) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=44[0m
+[0;32mI (80560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (84960) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=22[0m
+[0;32mI (87960) SHS01: Moving Target -> DETECTED (raw=1, dist=30cm, energy=100)[0m
+[0;32mI (87960) SHS01: Occupancy -> DETECTED (mv=1 st=0)[0m
+[0;32mI (88160) SHS01: Static Target -> DETECTED (dist=30cm, energy=100)[0m
+[0;32mI (90560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (100560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (110560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (114960) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=107 mv_e=0 st_d=107 st_e=100[0m
+[0;32mI (120560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (130560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (140560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (143560) SHS01: RAW: state=0x03 mv=1 st=1 mv_d=56 mv_e=62 st_d=72 st_e=100[0m
+[0;32mI (150560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (160560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (163160) SHS01: RAW: state=0x03 mv=1 st=1 mv_d=44 mv_e=100 st_d=50 st_e=100[0m
+[0;32mI (170560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (180560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (190560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (198360) SHS01: RAW: state=0x03 mv=1 st=1 mv_d=82 mv_e=78 st_d=142 st_e=100[0m
+[0;32mI (200560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (210560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (220560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (224760) SHS01: RAW: state=0x03 mv=1 st=1 mv_d=53 mv_e=100 st_d=52 st_e=100[0m
+[0;32mI (230560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (240560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (249960) SHS01: RAW: state=0x03 mv=1 st=1 mv_d=79 mv_e=86 st_d=70 st_e=100[0m
+[0;32mI (250560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (260560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (270560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (280560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (289860) SHS01: RAW: state=0x03 mv=1 st=1 mv_d=30 mv_e=86 st_d=30 st_e=100[0m
+[0;32mI (290560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (300560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (309750) SHS01: ZDO signal: NWK Permit Join (0x36), status: ESP_OK[0m
+[0;32mI (310560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (313260) SHS01: RAW: state=0x03 mv=1 st=1 mv_d=92 mv_e=65 st_d=52 st_e=100[0m
+[0;32mI (320560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (326260) SHS01: RAW: state=0x03 mv=1 st=1 mv_d=75 mv_e=92 st_d=67 st_e=100[0m
+[0;32mI (330560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (340560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (350560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (353960) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=30 mv_e=0 st_d=30 st_e=52[0m
+[0;32mI (355860) SHS01: Static Target -> CLEAR (dist=30cm, energy=47)[0m
+[0;32mI (355960) SHS01: Static Target -> DETECTED (dist=30cm, energy=47)[0m
+[0;32mI (360560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (364660) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=30 mv_e=0 st_d=30 st_e=20[0m
+[0;32mI (368160) SHS01: Static Target -> CLEAR (dist=30cm, energy=18)[0m
+[0;32mI (368260) SHS01: Static Target -> DETECTED (dist=30cm, energy=17)[0m
+[0;32mI (370560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (380260) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=30 mv_e=0 st_d=30 st_e=42[0m
+[0;32mI (380560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (382660) SHS01: Static Target -> CLEAR (dist=30cm, energy=33)[0m
+[0;32mI (382760) SHS01: Static Target -> DETECTED (dist=30cm, energy=33)[0m
+[0;32mI (383460) SHS01: Static Target -> CLEAR (dist=30cm, energy=30)[0m
+[0;32mI (383560) SHS01: Static Target -> DETECTED (dist=30cm, energy=30)[0m
+[0;32mI (387160) SHS01: Static Target -> CLEAR (dist=30cm, energy=13)[0m
+[0;32mI (387260) SHS01: Static Target -> DETECTED (dist=30cm, energy=13)[0m
+[0;32mI (388960) SHS01: Static Target -> CLEAR (dist=30cm, energy=12)[0m
+[0;32mI (389060) SHS01: Static Target -> DETECTED (dist=30cm, energy=12)[0m
+[0;32mI (390560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (391860) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=30 mv_e=0 st_d=30 st_e=21[0m
+[0;32mI (394360) SHS01: Static Target -> CLEAR (dist=30cm, energy=23)[0m
+[0;32mI (394460) SHS01: Static Target -> DETECTED (dist=30cm, energy=23)[0m
+[0;32mI (395260) SHS01: Static Target -> CLEAR (dist=30cm, energy=22)[0m
+[0;32mI (395360) SHS01: Static Target -> DETECTED (dist=30cm, energy=22)[0m
+[0;32mI (397360) SHS01: Static Target -> CLEAR (dist=30cm, energy=28)[0m
+[0;32mI (397460) SHS01: Static Target -> DETECTED (dist=30cm, energy=28)[0m
+[0;32mI (400560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (404960) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=30 mv_e=0 st_d=30 st_e=11[0m
+[0;32mI (410560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (412360) SHS01: Moving Target -> CLEAR (raw=0, dist=30cm, energy=0)[0m
+[0;32mI (412560) SHS01: Static Target -> CLEAR (dist=30cm, energy=31)[0m
+[0;32mI (412560) SHS01: Occupancy -> CLEAR (mv=0 st=0)[0m
+[0;32mI (414460) SHS01: Moving Target -> DETECTED (raw=1, dist=30cm, energy=61)[0m
+[0;32mI (414460) SHS01: Occupancy -> DETECTED (mv=1 st=0)[0m
+[0;32mI (414560) SHS01: Static Target -> DETECTED (dist=30cm, energy=41)[0m
+[0;32mI (416360) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=30 mv_e=0 st_d=30 st_e=40[0m
+[0;32mI (417360) SHS01: Static Target -> CLEAR (dist=30cm, energy=35)[0m
+[0;32mI (417460) SHS01: Static Target -> DETECTED (dist=30cm, energy=36)[0m
+[0;32mI (417660) SHS01: Static Target -> CLEAR (dist=30cm, energy=37)[0m
+[0;32mI (417960) SHS01: Static Target -> DETECTED (dist=30cm, energy=38)[0m
+[0;32mI (420560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (422760) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=30 mv_e=0 st_d=30 st_e=62[0m
+[0;32mI (429160) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=30 mv_e=0 st_d=30 st_e=79[0m
+[0;32mI (430560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (440460) SHS01: RAW: state=0x03 mv=1 st=1 mv_d=30 mv_e=100 st_d=30 st_e=100[0m
+[0;32mI (440560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (443860) SHS01: Static Target -> CLEAR (dist=30cm, energy=50)[0m
+[0;32mI (444160) SHS01: Static Target -> DETECTED (dist=30cm, energy=50)[0m
+[0;32mI (444260) SHS01: Static Target -> CLEAR (dist=30cm, energy=48)[0m
+[0;32mI (444560) SHS01: Static Target -> DETECTED (dist=30cm, energy=44)[0m
+[0;32mI (445260) SHS01: Static Target -> CLEAR (dist=30cm, energy=44)[0m
+[0;32mI (445360) SHS01: Static Target -> DETECTED (dist=30cm, energy=44)[0m
+[0;32mI (445560) SHS01: Static Target -> CLEAR (dist=30cm, energy=43)[0m
+[0;32mI (445660) SHS01: Static Target -> DETECTED (dist=30cm, energy=43)[0m
+[0;32mI (445960) SHS01: Static Target -> CLEAR (dist=30cm, energy=41)[0m
+[0;32mI (446060) SHS01: Static Target -> DETECTED (dist=30cm, energy=40)[0m
+[0;32mI (446560) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=30 mv_e=0 st_d=30 st_e=38[0m
+[0;32mI (448460) SHS01: Static Target -> CLEAR (dist=30cm, energy=30)[0m
+[0;32mI (448660) SHS01: Static Target -> DETECTED (dist=30cm, energy=29)[0m
+[0;32mI (448860) SHS01: Static Target -> CLEAR (dist=30cm, energy=29)[0m
+[0;32mI (448960) SHS01: Static Target -> DETECTED (dist=30cm, energy=29)[0m
+[0;32mI (450060) SHS01: Static Target -> CLEAR (dist=30cm, energy=29)[0m
+[0;32mI (450160) SHS01: Static Target -> DETECTED (dist=30cm, energy=29)[0m
+[0;32mI (450360) SHS01: Static Target -> CLEAR (dist=30cm, energy=29)[0m
+[0;32mI (450460) SHS01: Static Target -> DETECTED (dist=30cm, energy=29)[0m
+[0;32mI (450560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (450760) SHS01: Static Target -> CLEAR (dist=30cm, energy=31)[0m
+[0;32mI (450860) SHS01: Static Target -> DETECTED (dist=30cm, energy=32)[0m
+[0;32mI (450960) SHS01: Static Target -> CLEAR (dist=30cm, energy=31)[0m
+[0;32mI (451060) SHS01: Static Target -> DETECTED (dist=30cm, energy=31)[0m
+[0;32mI (451260) SHS01: Static Target -> CLEAR (dist=30cm, energy=33)[0m
+[0;32mI (451560) SHS01: Static Target -> DETECTED (dist=30cm, energy=34)[0m
+[0;32mI (451860) SHS01: Static Target -> CLEAR (dist=30cm, energy=34)[0m
+[0;32mI (451960) SHS01: Static Target -> DETECTED (dist=30cm, energy=34)[0m
+[0;32mI (452160) SHS01: Static Target -> CLEAR (dist=30cm, energy=33)[0m
+[0;32mI (452260) SHS01: Static Target -> DETECTED (dist=30cm, energy=32)[0m
+[0;32mI (452360) SHS01: Static Target -> CLEAR (dist=30cm, energy=31)[0m
+[0;32mI (452460) SHS01: Static Target -> DETECTED (dist=30cm, energy=31)[0m
+[0;32mI (452660) SHS01: Static Target -> CLEAR (dist=30cm, energy=31)[0m
+[0;32mI (452760) SHS01: Static Target -> DETECTED (dist=30cm, energy=31)[0m
+[0;32mI (452960) SHS01: Static Target -> CLEAR (dist=30cm, energy=31)[0m
+[0;32mI (453260) SHS01: RAW: state=0x01 mv=1 st=0 mv_d=30 mv_e=80 st_d=30 st_e=32[0m
+[0;32mI (453360) SHS01: Static Target -> DETECTED (dist=30cm, energy=33)[0m
+[0;32mI (453660) SHS01: Static Target -> CLEAR (dist=30cm, energy=33)[0m
+[0;32mI (453760) SHS01: Static Target -> DETECTED (dist=30cm, energy=33)[0m
+[0;32mI (453860) SHS01: Static Target -> CLEAR (dist=30cm, energy=33)[0m
+[0;32mI (453960) SHS01: Static Target -> DETECTED (dist=30cm, energy=34)[0m
+[0;32mI (454060) SHS01: Static Target -> CLEAR (dist=30cm, energy=34)[0m
+[0;32mI (454160) SHS01: Static Target -> DETECTED (dist=30cm, energy=34)[0m
+[0;32mI (454360) SHS01: Static Target -> CLEAR (dist=30cm, energy=34)[0m
+[0;32mI (454760) SHS01: Static Target -> DETECTED (dist=30cm, energy=35)[0m
+[0;32mI (455260) SHS01: Static Target -> CLEAR (dist=30cm, energy=33)[0m
+[0;32mI (455360) SHS01: Static Target -> DETECTED (dist=30cm, energy=32)[0m
+[0;32mI (455760) SHS01: Static Target -> CLEAR (dist=30cm, energy=33)[0m
+[0;32mI (455960) SHS01: Static Target -> DETECTED (dist=30cm, energy=34)[0m
+[0;32mI (456460) SHS01: Static Target -> CLEAR (dist=30cm, energy=38)[0m
+[0;32mI (456660) SHS01: Static Target -> DETECTED (dist=30cm, energy=38)[0m
+[0;32mI (456760) SHS01: Static Target -> CLEAR (dist=30cm, energy=41)[0m
+[0;32mI (456860) SHS01: Static Target -> DETECTED (dist=30cm, energy=43)[0m
+[0;32mI (457960) SHS01: Static Target -> CLEAR (dist=30cm, energy=45)[0m
+[0;32mI (458060) SHS01: Static Target -> DETECTED (dist=30cm, energy=46)[0m
+[0;32mI (458260) SHS01: Static Target -> CLEAR (dist=30cm, energy=48)[0m
+[0;32mI (458360) SHS01: Static Target -> DETECTED (dist=30cm, energy=47)[0m
+[0;32mI (459660) SHS01: Static Target -> CLEAR (dist=30cm, energy=49)[0m
+[0;32mI (459760) SHS01: Static Target -> DETECTED (dist=30cm, energy=49)[0m
+[0;32mI (460060) SHS01: Static Target -> CLEAR (dist=30cm, energy=49)[0m
+[0;32mI (460260) SHS01: Static Target -> DETECTED (dist=30cm, energy=50)[0m
+[0;32mI (460360) SHS01: RAW: state=0x01 mv=1 st=0 mv_d=30 mv_e=54 st_d=30 st_e=49[0m
+[0;32mI (460360) SHS01: Static Target -> CLEAR (dist=30cm, energy=49)[0m
+[0;32mI (460460) SHS01: Static Target -> DETECTED (dist=30cm, energy=50)[0m
+[0;32mI (460560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (460560) SHS01: Static Target -> CLEAR (dist=30cm, energy=51)[0m
+[0;32mI (460660) SHS01: Static Target -> DETECTED (dist=30cm, energy=51)[0m
+[0;32mI (461260) SHS01: Static Target -> CLEAR (dist=30cm, energy=46)[0m
+[0;32mI (461360) SHS01: Static Target -> DETECTED (dist=30cm, energy=46)[0m
+[0;32mI (462260) SHS01: Static Target -> CLEAR (dist=30cm, energy=45)[0m
+[0;32mI (462360) SHS01: Static Target -> DETECTED (dist=30cm, energy=44)[0m
+[0;32mI (463160) SHS01: Static Target -> CLEAR (dist=30cm, energy=42)[0m
+[0;32mI (463260) SHS01: Static Target -> DETECTED (dist=30cm, energy=42)[0m
+[0;32mI (463660) SHS01: Static Target -> CLEAR (dist=30cm, energy=41)[0m
+[0;32mI (463760) SHS01: Static Target -> DETECTED (dist=30cm, energy=41)[0m
+[0;32mI (464160) SHS01: Static Target -> CLEAR (dist=30cm, energy=42)[0m
+[0;32mI (464360) SHS01: Static Target -> DETECTED (dist=30cm, energy=41)[0m
+[0;32mI (464760) SHS01: Static Target -> CLEAR (dist=30cm, energy=38)[0m
+[0;32mI (464860) SHS01: Static Target -> DETECTED (dist=30cm, energy=39)[0m
+[0;32mI (464960) SHS01: Static Target -> CLEAR (dist=30cm, energy=39)[0m
+[0;32mI (465060) SHS01: Static Target -> DETECTED (dist=30cm, energy=39)[0m
+[0;32mI (465160) SHS01: Static Target -> CLEAR (dist=30cm, energy=39)[0m
+[0;32mI (465260) SHS01: Static Target -> DETECTED (dist=30cm, energy=40)[0m
+[0;32mI (465560) SHS01: Static Target -> CLEAR (dist=30cm, energy=40)[0m
+[0;32mI (465760) SHS01: Static Target -> DETECTED (dist=30cm, energy=38)[0m
+[0;32mI (466260) SHS01: Static Target -> CLEAR (dist=30cm, energy=37)[0m
+[0;32mI (466360) SHS01: Static Target -> DETECTED (dist=30cm, energy=38)[0m
+[0;32mI (467060) SHS01: Static Target -> CLEAR (dist=30cm, energy=40)[0m
+[0;32mI (467160) SHS01: Static Target -> DETECTED (dist=30cm, energy=40)[0m
+[0;32mI (467760) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=30 mv_e=0 st_d=30 st_e=38[0m
+[0;32mI (469060) SHS01: Static Target -> CLEAR (dist=30cm, energy=44)[0m
+[0;32mI (469460) SHS01: Static Target -> DETECTED (dist=30cm, energy=43)[0m
+[0;32mI (469560) SHS01: Static Target -> CLEAR (dist=30cm, energy=43)[0m
+[0;32mI (469760) SHS01: Static Target -> DETECTED (dist=30cm, energy=44)[0m
+[0;32mI (470260) SHS01: Static Target -> CLEAR (dist=30cm, energy=45)[0m
+[0;32mI (470360) SHS01: Static Target -> DETECTED (dist=30cm, energy=44)[0m
+[0;32mI (470460) SHS01: Static Target -> CLEAR (dist=30cm, energy=46)[0m
+[0;32mI (470560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (470560) SHS01: Static Target -> DETECTED (dist=30cm, energy=46)[0m
+[0;32mI (470860) SHS01: Static Target -> CLEAR (dist=30cm, energy=48)[0m
+[0;32mI (470960) SHS01: Static Target -> DETECTED (dist=30cm, energy=48)[0m
+[0;32mI (474760) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=30 mv_e=0 st_d=30 st_e=19[0m
+[0;32mI (475260) SHS01: Static Target -> CLEAR (dist=30cm, energy=16)[0m
+[0;32mI (475460) SHS01: Static Target -> DETECTED (dist=30cm, energy=15)[0m
+[0;32mI (480560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (482960) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=30 mv_e=0 st_d=30 st_e=18[0m
+[0;32mI (490360) SHS01: Moving Target -> CLEAR (raw=0, dist=30cm, energy=0)[0m
+[0;32mI (490560) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (490560) SHS01: Static Target -> CLEAR (dist=30cm, energy=17)[0m
+[0;32mI (490560) SHS01: Occupancy -> CLEAR (mv=0 st=0)[0m
+[0;32mI (492860) SHS01: Moving Target -> DETECTED (raw=1, dist=30cm, energy=58)[0m
+[0;32mI (492860) SHS01: Occupancy -> DETECTED (mv=1 st=0)[0m
+[0;32mI (492960) SHS01: Static Target -> DETECTED (dist=30cm, energy=28)[0m
+[0;32mI (493060) SHS01: Static Target -> CLEAR (dist=30cm, energy=27)[0m
+[0;32mI (493160) SHS01: Static Target -> DETECTED (dist=30cm, energy=26)[0m
+[0;32mI (494260) SHS01: RAW: state=0x01 mv=1 st=0 mv_d=30 mv_e=100 st_d=30 st_e=34[0m
+[0;32mI (494260) SHS01: Static Target -> CLEAR (dist=30cm, energy=34)[0m
+[0;32mI (494660) SHS01: Static Target -> DETECTED (dist=30cm, energy=36)[0m
+[0;

@@ -1,0 +1,19 @@
+Command: ninja flash
+[1/5] cd /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/esp-idf/esptool_py && /Users/thibaultbougard/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/thibaultbougard/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/partition_table/partition-table.bin /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/SHS01_Enhanced.bin
+SHS01_Enhanced.bin binary size 0x9d140 bytes. Smallest app partition is 0xe1000 bytes. 0x43ec0 bytes (30%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/bootloader/esp-idf/esptool_py && /Users/thibaultbougard/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/thibaultbougard/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/bootloader/bootloader.bin
+Bootloader binary size 0x57e0 bytes. 0x2820 bytes (31%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /Users/thibaultbougard/esp/v5.5.1/esp-idf/components/esptool_py && /Users/thibaultbougard/.espressif/tools/cmake/3.30.2/CMake.app/Contents/bin/cmake -D IDF_PATH=/Users/thibaultbougard/esp/v5.5.1/esp-idf -D "SERIAL_TOOL=/Users/thibaultbougard/.espressif/python_env/idf5.5_py3.9_env/bin/python;;/Users/thibaultbougard/esp/v5.5.1/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c6" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build -P /Users/thibaultbougard/esp/v5.5.1/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32c6 -p /dev/tty.usbmodem5A7A0486211 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 SHS01_Enhanced.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.11.dev1
+Serial port /dev/tty.usbmodem5A7A0486211
+
+A fatal error occurred: Could not open /dev/tty.usbmodem5A7A0486211, the port is busy or doesn't exist.
+([Errno 16] could not open port /dev/tty.usbmodem5A7A0486211: [Errno 16] Resource busy: '/dev/tty.usbmodem5A7A0486211')
+
+FAILED: CMakeFiles/flash /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/CMakeFiles/flash 
+cd /Users/thibaultbougard/esp/v5.5.1/esp-idf/components/esptool_py && /Users/thibaultbougard/.espressif/tools/cmake/3.30.2/CMake.app/Contents/bin/cmake -D IDF_PATH=/Users/thibaultbougard/esp/v5.5.1/esp-idf -D "SERIAL_TOOL=/Users/thibaultbougard/.espressif/python_env/idf5.5_py3.9_env/bin/python;;/Users/thibaultbougard/esp/v5.5.1/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c6" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build -P /Users/thibaultbougard/esp/v5.5.1/esp-idf/components/esptool_py/run_serial_tool.cmake
+ninja: build stopped: subcommand failed.

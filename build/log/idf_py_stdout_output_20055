@@ -1,0 +1,1092 @@
+Command: /Users/thibaultbougard/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/thibaultbougard/esp/v5.5.1/esp-idf/tools/idf_monitor.py -p /dev/tty.usbmodem5A7A0486211 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/SHS01_Enhanced.elf /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/bootloader/bootloader.elf -m '/Users/thibaultbougard/.espressif/python_env/idf5.5_py3.9_env/bin/python' '/Users/thibaultbougard/esp/v5.5.1/esp-idf/tools/idf.py' '-p' '/dev/tty.usbmodem5A7A0486211'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec 12 2025 18:18:47[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (44) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 000e1000[0m
+[0;32mI (72) boot:  3 zb_storage       Unknown data     01 81 000f1000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 000f5000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42080020 size=1151ch ( 70940) map[0m
+[0;32mI (109) esp_image: segment 1: paddr=00021544 vaddr=40800000 size=06ad4h ( 27348) load[0m
+[0;32mI (116) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=780a8h (491688) map[0m
+[0;32mI (208) esp_image: segment 3: paddr=000a00d0 vaddr=40806ad4 size=0d75ch ( 55132) load[0m
+[0;32mI (225) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (225) boot: Disabling RNG early entropy source...[0m
+[0;32mI (235) cpu_start: Unicore app[0m
+[0;32mI (244) cpu_start: Pro cpu start user code[0m
+[0;32mI (244) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (244) app_init: Application information:[0m
+[0;32mI (244) app_init: Project name:     SHS01_Enhanced[0m
+[0;32mI (248) app_init: App version:      1[0m
+[0;32mI (252) app_init: Compile time:     Dec 12 2025 18:18:21[0m
+[0;32mI (257) app_init: ELF file SHA256:  689313bf8...[0m
+[0;32mI (261) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (265) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (269) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (273) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (277) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (283) heap_init: At 408193D0 len 00063240 (396 KiB): RAM[0m
+[0;32mI (288) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (294) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (300) spi_flash: detected chip: gd[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;33mW (305) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (318) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (324) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (330) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (349) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (350) main_task: Started on CPU0[0m
+[0;32mI (350) main_task: Calling app_main()[0m
+[0;32mI (350) SHS01: NVS loaded: mv_cd=15s, occ_cd=15s, mv_sens=50, st_sens=50, mv_gate=5, st_gate=6, eng=1[0m
+[0;32mI (360) LD2410: LD2410 driver initialized[0m
+[0;32mI (460) SHS01: Applying LD2410 configuration...[0m
+[0;32mI (460) SHS01: Static Target -> DETECTED (dist=30cm, energy=38)[0m
+[0;32mI (460) SHS01: Occupancy -> DETECTED (mv=0 st=1)[0m
+[0;32mI (460) SHS01: First data: move=0cm/0, static=30cm/38, detect=0cm[0m
+[0;32mI (460) SHS01: GATE: G0=14/0 G1=6/0 G2=3/38 G3=5/8 G4=3/6[0m
+[0;32mI (470) SHS01: Gate attributes registered in Zigbee[0m
+[0;32mI (510) LD2410: Set max gates: moving=5, static=6, timeout=15s[0m
+[0;32mI (530) SHS01: Set max gates: mv=5 st=6 timeout=15 -> OK[0m
+[0;32mI (570) LD2410: Set all gates sensitivity: move=50, still=50[0m
+[0;32mI (590) SHS01: Set sensitivity: mv=50 st=50 -> OK[0m
+[0;32mI (590) LD2410: Moving cooldown set to 15 seconds[0m
+[0;32mI (590) LD2410: Occupancy clear delay set to 15 seconds[0m
+[0;32mI (590) LD2410: Enabling engineering mode...[0m
+[0;32mI (640) LD2410: Engineering mode ENABLED successfully[0m
+[0;32mI (660) SHS01: Enable engineering mode -> OK[0m
+[0;32mI (800) LD2410: Firmware: V2.68.25070917[0m
+[0;32mI (820) SHS01: Firmware: V2.68[0m
+[0;32mI (860) LD2410: Config read: max_move=5, max_static=6, timeout=15[0m
+[0;32mI (880) SHS01: Read config -> OK[0m
+[0;32mI (880) SHS01: LD2410 configuration complete[0m
+[0;32mI (880) SHS01: LD2410 processing task started[0m
+[0;32mI (880) SHS01: BOOT long-press enabled on GPIO9 (hold 6000 ms to factory reset)[0m
+[0;32mI (880) phy_init: phy_version 341,a6c8fe6,Jul 30 2025,18:34:11[0m
+[0;32mI (960) phy: libbtbb version: a945109, Jul 30 2025, 18:34:25[0m
+[0;32mI (990) SHS01: Enhanced SHS01 firmware started[0m
+[0;32mI (990) main_task: Returned from app_main()[0m
+[0;32mI (1000) SHS01: ZDO signal: ZDO Config Ready (0x17), status: ESP_FAIL[0m
+[0;32mI (1000) SHS01: Initialize Zigbee stack[0m
+[0;32mI (1000) SHS01: ZDO signal: NWK Permit Join (0x36), status: ESP_OK[0m
+[0;32mI (1000) SHS01: Device started up in non factory-reset mode[0m
+[0;32mI (1010) SHS01: Device rebooted[0m
+[0;32mI (1420) SHS01: GATE: G0=14/0 G1=16/0 G2=7/39 G3=9/9 G4=3/7[0m
+[0;32mI (2420) SHS01: GATE: G0=15/0 G1=12/0 G2=7/47 G3=6/11 G4=1/9[0m
+[0;32mI (3020) SHS01: Moving Target -> DETECTED (raw=1, dist=30cm, energy=51)[0m
+[0;32mI (3420) SHS01: GATE: G0=39/0 G1=30/0 G2=11/54 G3=5/11 G4=5/9[0m
+[0;32mI (4420) SHS01: GATE: G0=29/0 G1=15/0 G2=8/65 G3=7/10 G4=3/9[0m
+[0;32mI (5420) SHS01: GATE: G0=14/0 G1=8/0 G2=5/68 G3=4/10 G4=3/9[0m
+[0;32mI (6420) SHS01: GATE: G0=22/0 G1=22/0 G2=19/64 G3=9/10 G4=5/9[0m
+[0;32mI (7420) SHS01: GATE: G0=24/0 G1=14/0 G2=4/67 G3=6/12 G4=6/9[0m
+[0;32mI (7820) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=30 mv_e=0 st_d=30 st_e=64[0m
+[0;32mI (8420) SHS01: GATE: G0=16/0 G1=6/0 G2=8/60 G3=4/13 G4=6/9[0m
+[0;32mI (9420) SHS01: GATE: G0=27/0 G1=14/0 G2=8/56 G3=4/14 G4=3/8[0m
+[0;32mI (10420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (10420) SHS01: GATE: G0=45/0 G1=36/0 G2=7/53 G3=4/14 G4=5/6[0m
+[0;32mI (11420) SHS01: GATE: G0=13/0 G1=6/0 G2=4/47 G3=2/11 G4=5/5[0m
+[0;32mI (12420) SHS01: GATE: G0=20/0 G1=12/0 G2=7/46 G3=4/11 G4=7/5[0m
+[0;32mI (12820) SHS01: Static Target -> CLEAR (dist=30cm, energy=48)[0m
+[0;32mI (12920) SHS01: Static Target -> DETECTED (dist=30cm, energy=48)[0m
+[0;32mI (13020) SHS01: Static Target -> CLEAR (dist=30cm, energy=48)[0m
+[0;32mI (13220) SHS01: Static Target -> DETECTED (dist=52cm, energy=100)[0m
+[0;32mI (13420) SHS01: GATE: G0=100/0 G1=100/0 G2=100/100 G3=33/26 G4=33/24[0m
+[0;32mI (14070) SHS01: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (14420) SHS01: GATE: G0=100/0 G1=100/0 G2=100/100 G3=85/100 G4=43/86[0m
+[0;32mI (15420) SHS01: GATE: G0=100/0 G1=100/0 G2=100/100 G3=100/100 G4=100/100[0m
+[0;32mI (16420) SHS01: GATE: G0=100/0 G1=100/0 G2=100/100 G3=100/100 G4=91/100[0m
+[0;32mI (17420) SHS01: GATE: G0=100/0 G1=100/0 G2=81/100 G3=85/100 G4=86/100[0m
+[0;32mI (18090) SHS01: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (18420) SHS01: GATE: G0=100/0 G1=100/0 G2=100/100 G3=24/100 G4=72/100[0m
+[0;32mI (19100) SHS01: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (19420) SHS01: GATE: G0=100/0 G1=94/0 G2=27/100 G3=2/100 G4=4/100[0m
+[0;32mI (20420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (20420) SHS01: GATE: G0=28/0 G1=22/0 G2=5/100 G3=9/100 G4=8/100[0m
+[0;32mI (21420) SHS01: GATE: G0=26/0 G1=15/0 G2=9/100 G3=4/100 G4=5/100[0m
+[0;32mI (22420) SHS01: GATE: G0=14/0 G1=20/0 G2=12/100 G3=5/68 G4=3/100[0m
+[0;32mI (23420) SHS01: GATE: G0=16/0 G1=11/0 G2=10/100 G3=8/37 G4=5/67[0m
+[0;32mI (24420) SHS01: GATE: G0=14/0 G1=8/0 G2=3/100 G3=8/24 G4=2/35[0m
+[0;32mI (25420) SHS01: GATE: G0=22/0 G1=13/0 G2=5/73 G3=9/18 G4=1/19[0m
+[0;32mI (25820) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=53 mv_e=0 st_d=53 st_e=58[0m
+[0;32mI (26420) SHS01: GATE: G0=20/0 G1=5/0 G2=8/47 G3=4/13 G4=6/13[0m
+[0;32mI (27420) SHS01: GATE: G0=13/0 G1=13/0 G2=3/42 G3=5/12 G4=4/10[0m
+[0;32mI (28420) SHS01: GATE: G0=13/0 G1=10/0 G2=3/46 G3=9/12 G4=7/8[0m
+[0;32mI (29420) SHS01: GATE: G0=13/0 G1=9/0 G2=5/47 G3=7/12 G4=5/8[0m
+[0;32mI (30420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (30420) SHS01: Static Target -> CLEAR (dist=53cm, energy=48)[0m
+[0;32mI (30420) SHS01: GATE: G0=41/0 G1=58/0 G2=16/48 G3=3/12 G4=5/10[0m
+[0;32mI (30620) SHS01: Static Target -> DETECTED (dist=64cm, energy=98)[0m
+[0;32mI (31420) SHS01: GATE: G0=100/0 G1=100/0 G2=100/100 G3=69/71 G4=56/80[0m
+[0;32mI (32420) SHS01: GATE: G0=100/0 G1=100/0 G2=100/100 G3=100/100 G4=53/100[0m
+[0;32mI (33420) SHS01: GATE: G0=100/0 G1=100/0 G2=100/100 G3=100/100 G4=26/100[0m
+[0;32mI (34420) SHS01: GATE: G0=100/0 G1=100/0 G2=48/100 G3=7/100 G4=7/100[0m
+[0;32mI (35420) SHS01: GATE: G0=20/0 G1=27/0 G2=8/100 G3=5/100 G4=5/100[0m
+[0;32mI (36420) SHS01: GATE: G0=15/0 G1=15/0 G2=5/100 G3=3/100 G4=6/100[0m
+[0;32mI (37420) SHS01: GATE: G0=13/0 G1=4/0 G2=4/100 G3=4/85 G4=7/100[0m
+[0;32mI (38420) SHS01: GATE: G0=13/0 G1=6/0 G2=5/100 G3=5/40 G4=7/85[0m
+[0;32mI (39420) SHS01: GATE: G0=13/0 G1=11/0 G2=3/100 G3=4/26 G4=8/43[0m
+[0;32mI (40420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (40420) SHS01: GATE: G0=13/0 G1=4/0 G2=5/100 G3=5/18 G4=6/23[0m
+[0;32mI (41420) SHS01: GATE: G0=13/0 G1=6/0 G2=4/75 G3=9/13 G4=3/14[0m
+[0;32mI (42320) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=67 mv_e=0 st_d=67 st_e=59[0m
+[0;32mI (42420) SHS01: GATE: G0=13/0 G1=8/0 G2=3/58 G3=5/14 G4=6/9[0m
+[0;32mI (43420) SHS01: GATE: G0=15/0 G1=7/0 G2=4/53 G3=5/14 G4=6/8[0m
+[0;32mI (44420) SHS01: GATE: G0=13/0 G1=10/0 G2=7/51 G3=3/14 G4=4/7[0m
+[0;32mI (45420) SHS01: GATE: G0=14/0 G1=7/0 G2=5/45 G3=6/14 G4=6/6[0m
+[0;32mI (46420) SHS01: GATE: G0=13/0 G1=5/0 G2=5/41 G3=7/12 G4=5/5[0m
+[0;32mI (47420) SHS01: GATE: G0=13/0 G1=8/0 G2=6/38 G3=6/11 G4=7/4[0m
+[0;32mI (48420) SHS01: GATE: G0=13/0 G1=5/0 G2=5/35 G3=9/12 G4=7/5[0m
+[0;32mI (49420) SHS01: GATE: G0=14/0 G1=9/0 G2=5/35 G3=6/11 G4=7/6[0m
+[0;32mI (50320) SHS01: Moving Target -> CLEAR (raw=0, dist=67cm, energy=0)[0m
+[0;32mI (50420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (50420) SHS01: GATE: G0=14/0 G1=5/0 G2=3/40 G3=5/11 G4=5/6[0m
+[0;32mI (51420) SHS01: GATE: G0=14/0 G1=4/0 G2=2/39 G3=8/12 G4=6/7[0m
+[0;32mI (51720) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=67 mv_e=0 st_d=67 st_e=39[0m
+[0;32mI (52420) SHS01: GATE: G0=13/0 G1=4/0 G2=5/40 G3=8/12 G4=7/8[0m
+[0;32mI (53420) SHS01: GATE: G0=13/0 G1=15/0 G2=10/40 G3=8/12 G4=7/7[0m
+[0;32mI (54420) SHS01: GATE: G0=14/0 G1=8/0 G2=4/42 G3=6/12 G4=6/8[0m
+[0;32mI (55420) SHS01: GATE: G0=14/0 G1=13/0 G2=4/50 G3=6/12 G4=8/7[0m
+[0;32mI (56420) SHS01: GATE: G0=14/0 G1=10/0 G2=8/50 G3=4/13 G4=3/7[0m
+[0;32mI (57420) SHS01: GATE: G0=13/0 G1=7/0 G2=7/54 G3=4/15 G4=7/7[0m
+[0;32mI (58420) SHS01: GATE: G0=13/0 G1=5/0 G2=4/48 G3=5/15 G4=5/8[0m
+[0;32mI (59420) SHS01: GATE: G0=13/0 G1=6/0 G2=6/42 G3=4/15 G4=5/7[0m
+[0;32mI (60420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (60420) SHS01: GATE: G0=13/0 G1=6/0 G2=2/43 G3=8/15 G4=5/6[0m
+[0;32mI (60620) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=67 mv_e=0 st_d=67 st_e=42[0m
+[0;32mI (61420) SHS01: GATE: G0=14/0 G1=6/0 G2=8/41 G3=5/15 G4=6/4[0m
+[0;32mI (62420) SHS01: GATE: G0=13/0 G1=4/0 G2=7/42 G3=7/16 G4=6/4[0m
+[0;32mI (63420) SHS01: GATE: G0=13/0 G1=5/0 G2=4/37 G3=7/16 G4=7/4[0m
+[0;32mI (64420) SHS01: GATE: G0=18/0 G1=9/0 G2=6/34 G3=6/16 G4=7/4[0m
+[0;32mI (65420) SHS01: GATE: G0=13/0 G1=5/0 G2=4/29 G3=2/13 G4=6/3[0m
+[0;32mI (66420) SHS01: GATE: G0=13/0 G1=12/0 G2=5/31 G3=2/13 G4=5/4[0m
+[0;32mI (67420) SHS01: GATE: G0=13/0 G1=6/0 G2=6/42 G3=5/14 G4=7/5[0m
+[0;32mI (68420) SHS01: GATE: G0=13/0 G1=6/0 G2=6/49 G3=4/15 G4=6/6[0m
+[0;32mI (68720) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=67 mv_e=0 st_d=67 st_e=53[0m
+[0;32mI (69420) SHS01: GATE: G0=18/0 G1=17/0 G2=9/61 G3=3/16 G4=5/6[0m
+[0;32mI (70420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (70420) SHS01: GATE: G0=15/0 G1=11/0 G2=4/61 G3=4/15 G4=4/6[0m
+[0;32mI (71420) SHS01: GATE: G0=14/0 G1=5/0 G2=4/50 G3=3/12 G4=5/6[0m
+[0;32mI (72420) SHS01: GATE: G0=13/0 G1=5/0 G2=8/48 G3=4/11 G4=6/5[0m
+[0;32mI (73420) SHS01: GATE: G0=16/0 G1=10/0 G2=10/36 G3=7/11 G4=7/5[0m
+[0;32mI (74420) SHS01: GATE: G0=13/0 G1=4/0 G2=3/32 G3=4/10 G4=8/5[0m
+[0;32mI (75420) SHS01: GATE: G0=13/0 G1=5/0 G2=5/29 G3=8/10 G4=7/5[0m
+[0;32mI (76420) SHS01: GATE: G0=15/0 G1=7/0 G2=4/25 G3=3/9 G4=8/5[0m
+[0;32mI (76820) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=67 mv_e=0 st_d=67 st_e=25[0m
+[0;32mI (77420) SHS01: GATE: G0=17/0 G1=9/0 G2=4/26 G3=7/10 G4=6/5[0m
+[0;32mI (78420) SHS01: GATE: G0=13/0 G1=4/0 G2=7/32 G3=9/11 G4=3/7[0m
+[0;32mI (79420) SHS01: GATE: G0=13/0 G1=6/0 G2=6/37 G3=9/13 G4=6/8[0m
+[0;32mI (80420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (80420) SHS01: GATE: G0=14/0 G1=13/0 G2=10/41 G3=7/14 G4=9/8[0m
+[0;32mI (81420) SHS01: GATE: G0=15/0 G1=13/0 G2=12/45 G3=7/14 G4=6/8[0m
+[0;32mI (82420) SHS01: GATE: G0=14/0 G1=7/0 G2=4/44 G3=8/14 G4=6/7[0m
+[0;32mI (83420) SHS01: GATE: G0=13/0 G1=4/0 G2=3/39 G3=7/14 G4=6/6[0m
+[0;32mI (84420) SHS01: GATE: G0=14/0 G1=5/0 G2=3/33 G3=4/14 G4=5/5[0m
+[0;32mI (85420) SHS01: GATE: G0=13/0 G1=6/0 G2=3/26 G3=6/12 G4=5/4[0m
+[0;32mI (85720) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=67 mv_e=0 st_d=67 st_e=28[0m
+[0;32mI (86420) SHS01: Static Target -> CLEAR (dist=67cm, energy=26)[0m
+[0;32mI (86420) SHS01: Occupancy -> CLEAR (mv=0 st=0)[0m
+[0;32mI (86420) SHS01: GATE: G0=13/0 G1=6/0 G2=9/26 G3=2/12 G4=7/4[0m
+[0;32mI (87420) SHS01: GATE: G0=13/0 G1=7/0 G2=6/29 G3=5/12 G4=6/5[0m
+[0;32mI (88420) SHS01: GATE: G0=16/0 G1=10/0 G2=7/37 G3=5/12 G4=7/6[0m
+[0;32mI (89420) SHS01: GATE: G0=16/0 G1=5/0 G2=9/46 G3=4/14 G4=6/7[0m
+[0;32mI (90420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (90420) SHS01: GATE: G0=15/0 G1=6/0 G2=5/47 G3=8/13 G4=6/7[0m
+[0;32mI (91420) SHS01: GATE: G0=13/0 G1=5/0 G2=4/47 G3=5/13 G4=6/7[0m
+[0;32mI (92420) SHS01: GATE: G0=18/0 G1=15/0 G2=11/45 G3=6/12 G4=6/6[0m
+[0;32mI (93420) SHS01: GATE: G0=15/0 G1=10/0 G2=9/45 G3=2/13 G4=7/6[0m
+[0;32mI (94020) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=46[0m
+[0;32mI (94420) SHS01: GATE: G0=18/0 G1=6/0 G2=5/46 G3=8/13 G4=6/6[0m
+[0;32mI (95420) SHS01: GATE: G0=13/0 G1=7/0 G2=3/47 G3=4/14 G4=8/7[0m
+[0;32mI (96420) SHS01: GATE: G0=16/0 G1=9/0 G2=10/44 G3=8/15 G4=5/7[0m
+[0;32mI (97420) SHS01: GATE: G0=13/0 G1=12/0 G2=7/42 G3=6/15 G4=8/7[0m
+[0;32mI (98420) SHS01: GATE: G0=14/0 G1=12/0 G2=10/40 G3=7/13 G4=6/7[0m
+[0;32mI (99420) SHS01: GATE: G0=13/0 G1=9/0 G2=7/38 G3=7/11 G4=7/6[0m
+[0;32mI (100420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (100420) SHS01: GATE: G0=16/0 G1=8/0 G2=6/44 G3=6/12 G4=6/7[0m
+[0;32mI (101420) SHS01: GATE: G0=14/0 G1=8/0 G2=5/44 G3=6/10 G4=7/6[0m
+[0;32mI (102020) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=45[0m
+[0;32mI (102420) SHS01: GATE: G0=13/0 G1=12/0 G2=10/44 G3=6/11 G4=7/6[0m
+[0;32mI (103420) SHS01: GATE: G0=14/0 G1=6/0 G2=8/47 G3=5/12 G4=5/6[0m
+[0;32mI (104420) SHS01: GATE: G0=13/0 G1=5/0 G2=5/40 G3=5/10 G4=8/6[0m
+[0;32mI (105420) SHS01: GATE: G0=13/0 G1=4/0 G2=6/35 G3=4/9 G4=7/7[0m
+[0;32mI (106420) SHS01: GATE: G0=13/0 G1=5/0 G2=4/29 G3=5/8 G4=7/6[0m
+[0;32mI (107420) SHS01: GATE: G0=13/0 G1=6/0 G2=5/21 G3=2/8 G4=6/6[0m
+[0;32mI (108420) SHS01: GATE: G0=13/0 G1=14/0 G2=14/32 G3=7/9 G4=8/5[0m
+[0;32mI (109420) SHS01: GATE: G0=13/0 G1=8/0 G2=6/44 G3=5/12 G4=4/4[0m
+[0;32mI (110420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (110420) SHS01: GATE: G0=16/0 G1=9/0 G2=7/48 G3=6/12 G4=7/5[0m
+[0;32mI (110620) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=49[0m
+[0;32mI (111420) SHS01: GATE: G0=16/0 G1=4/0 G2=3/52 G3=5/11 G4=9/6[0m
+[0;32mI (112420) SHS01: GATE: G0=13/0 G1=7/0 G2=3/40 G3=8/10 G4=6/7[0m
+[0;32mI (113420) SHS01: GATE: G0=16/0 G1=7/0 G2=10/36 G3=3/9 G4=6/8[0m
+[0;32mI (114420) SHS01: GATE: G0=13/0 G1=8/0 G2=7/43 G3=6/10 G4=5/8[0m
+[0;32mI (115420) SHS01: GATE: G0=14/0 G1=8/0 G2=5/44 G3=9/10 G4=8/7[0m
+[0;32mI (116420) SHS01: GATE: G0=13/0 G1=4/0 G2=3/53 G3=8/12 G4=7/8[0m
+[0;32mI (117420) SHS01: GATE: G0=15/0 G1=12/0 G2=12/48 G3=7/11 G4=8/7[0m
+[0;32mI (118320) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=46[0m
+[0;32mI (118420) SHS01: GATE: G0=13/0 G1=6/0 G2=11/46 G3=5/11 G4=7/6[0m
+[0;32mI (119420) SHS01: GATE: G0=19/0 G1=6/0 G2=6/47 G3=6/12 G4=7/6[0m
+[0;32mI (120420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (120420) SHS01: GATE: G0=14/0 G1=8/0 G2=3/49 G3=2/12 G4=8/6[0m
+[0;32mI (121420) SHS01: GATE: G0=13/0 G1=5/0 G2=4/50 G3=6/12 G4=7/5[0m
+[0;32mI (122420) SHS01: GATE: G0=13/0 G1=19/0 G2=17/51 G3=2/13 G4=7/6[0m
+[0;32mI (123420) SHS01: GATE: G0=16/0 G1=8/0 G2=4/54 G3=3/12 G4=7/6[0m
+[0;32mI (124420) SHS01: GATE: G0=14/0 G1=6/0 G2=6/43 G3=3/10 G4=6/5[0m
+[0;32mI (125420) SHS01: GATE: G0=13/0 G1=6/0 G2=8/42 G3=3/10 G4=7/5[0m
+[0;32mI (126420) SHS01: GATE: G0=13/0 G1=11/0 G2=9/45 G3=5/9 G4=9/5[0m
+[0;32mI (127420) SHS01: GATE: G0=14/0 G1=6/0 G2=3/47 G3=4/11 G4=9/6[0m
+[0;32mI (128120) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=50[0m
+[0;32mI (128420) SHS01: GATE: G0=13/0 G1=7/0 G2=7/54 G3=2/11 G4=9/7[0m
+[0;32mI (129420) SHS01: GATE: G0=13/0 G1=12/0 G2=10/56 G3=4/12 G4=8/7[0m
+[0;32mI (130420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (130420) SHS01: GATE: G0=13/0 G1=8/0 G2=10/56 G3=7/12 G4=6/7[0m
+[0;32mI (131420) SHS01: GATE: G0=13/0 G1=7/0 G2=7/54 G3=8/11 G4=6/6[0m
+[0;32mI (132420) SHS01: GATE: G0=13/0 G1=10/0 G2=12/58 G3=5/12 G4=7/6[0m
+[0;32mI (133420) SHS01: GATE: G0=13/0 G1=13/0 G2=10/55 G3=8/13 G4=6/6[0m
+[0;32mI (134420) SHS01: GATE: G0=13/0 G1=8/0 G2=9/50 G3=6/13 G4=7/6[0m
+[0;32mI (135220) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=49[0m
+[0;32mI (135420) SHS01: GATE: G0=13/0 G1=8/0 G2=5/49 G3=6/13 G4=7/6[0m
+[0;32mI (136420) SHS01: GATE: G0=14/0 G1=7/0 G2=4/48 G3=5/13 G4=6/6[0m
+[0;32mI (137420) SHS01: GATE: G0=13/0 G1=11/0 G2=16/49 G3=4/12 G4=7/6[0m
+[0;32mI (138420) SHS01: GATE: G0=16/0 G1=7/0 G2=4/43 G3=4/12 G4=8/7[0m
+[0;32mI (139420) SHS01: GATE: G0=13/0 G1=6/0 G2=8/37 G3=5/11 G4=7/7[0m
+[0;32mI (140420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (140420) SHS01: GATE: G0=20/0 G1=20/0 G2=12/35 G3=8/13 G4=6/7[0m
+[0;32mI (141420) SHS01: GATE: G0=19/0 G1=15/0 G2=7/36 G3=7/13 G4=6/7[0m
+[0;32mI (142420) SHS01: GATE: G0=14/0 G1=5/0 G2=5/39 G3=8/12 G4=5/7[0m
+[0;32mI (143420) SHS01: GATE: G0=14/0 G1=6/0 G2=11/44 G3=7/13 G4=6/6[0m
+[0;32mI (144420) SHS01: GATE: G0=13/0 G1=12/0 G2=8/46 G3=2/12 G4=8/6[0m
+[0;32mI (144620) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=48[0m
+[0;32mI (145420) SHS01: GATE: G0=15/0 G1=10/0 G2=7/47 G3=5/12 G4=8/7[0m
+[0;32mI (146420) SHS01: GATE: G0=13/0 G1=5/0 G2=9/50 G3=3/13 G4=8/7[0m
+[0;32mI (147420) SHS01: GATE: G0=15/0 G1=5/0 G2=4/50 G3=7/13 G4=6/8[0m
+[0;32mI (148420) SHS01: GATE: G0=13/0 G1=11/0 G2=4/44 G3=3/13 G4=8/7[0m
+[0;32mI (149420) SHS01: GATE: G0=14/0 G1=4/0 G2=7/44 G3=4/12 G4=7/7[0m
+[0;32mI (150420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (150420) SHS01: GATE: G0=14/0 G1=12/0 G2=12/49 G3=5/13 G4=6/7[0m
+[0;32mI (151420) SHS01: GATE: G0=13/0 G1=5/0 G2=5/59 G3=10/13 G4=6/6[0m
+[0;32mI (151920) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=65[0m
+[0;32mI (152420) SHS01: GATE: G0=13/0 G1=12/0 G2=6/73 G3=5/12 G4=6/5[0m
+[0;32mI (153420) SHS01: GATE: G0=17/0 G1=9/0 G2=6/68 G3=6/11 G4=6/5[0m
+[0;32mI (154420) SHS01: GATE: G0=13/0 G1=5/0 G2=6/59 G3=7/9 G4=6/4[0m
+[0;32mI (155420) SHS01: GATE: G0=14/0 G1=12/0 G2=5/56 G3=6/8 G4=7/4[0m
+[0;32mI (156420) SHS01: GATE: G0=13/0 G1=8/0 G2=7/44 G3=4/9 G4=7/6[0m
+[0;32mI (157420) SHS01: GATE: G0=14/0 G1=5/0 G2=10/43 G3=6/9 G4=8/6[0m
+[0;32mI (158420) SHS01: GATE: G0=17/0 G1=13/0 G2=9/46 G3=8/10 G4=5/6[0m
+[0;32mI (158920) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=41[0m
+[0;32mI (159420) SHS01: GATE: G0=13/0 G1=8/0 G2=6/42 G3=6/11 G4=7/7[0m
+[0;32mI (160420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (160420) SHS01: GATE: G0=13/0 G1=6/0 G2=6/40 G3=8/12 G4=4/8[0m
+[0;32mI (161420) SHS01: GATE: G0=13/0 G1=5/0 G2=4/39 G3=4/12 G4=8/9[0m
+[0;32mI (162420) SHS01: GATE: G0=13/0 G1=16/0 G2=8/38 G3=5/11 G4=8/9[0m
+[0;32mI (163420) SHS01: GATE: G0=13/0 G1=5/0 G2=4/33 G3=8/10 G4=4/10[0m
+[0;32mI (164420) SHS01: GATE: G0=14/0 G1=8/0 G2=4/33 G3=2/11 G4=5/8[0m
+[0;32mI (165420) SHS01: GATE: G0=13/0 G1=6/0 G2=4/32 G3=5/10 G4=8/9[0m
+[0;32mI (166420) SHS01: GATE: G0=13/0 G1=8/0 G2=8/28 G3=9/10 G4=4/10[0m
+[0;32mI (167420) SHS01: GATE: G0=20/0 G1=5/0 G2=5/34 G3=9/9 G4=6/9[0m
+[0;32mI (168420) SHS01: GATE: G0=20/0 G1=11/0 G2=6/41 G3=6/10 G4=4/9[0m
+[0;32mI (168720) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=45[0m
+[0;32mI (169420) SHS01: GATE: G0=16/0 G1=8/0 G2=4/46 G3=4/13 G4=4/8[0m
+[0;32mI (170420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (170420) SHS01: GATE: G0=14/0 G1=7/0 G2=8/60 G3=6/16 G4=6/7[0m
+[0;32mI (171420) SHS01: GATE: G0=13/0 G1=5/0 G2=3/55 G3=5/16 G4=6/7[0m
+[0;32mI (172420) SHS01: GATE: G0=14/0 G1=6/0 G2=5/46 G3=3/14 G4=7/7[0m
+[0;32mI (173420) SHS01: GATE: G0=13/0 G1=20/0 G2=15/49 G3=8/13 G4=5/8[0m
+[0;32mI (174420) SHS01: GATE: G0=14/0 G1=6/0 G2=3/44 G3=5/13 G4=6/7[0m
+[0;32mI (175420) SHS01: GATE: G0=13/0 G1=11/0 G2=8/51 G3=9/14 G4=7/7[0m
+[0;32mI (176420) SHS01: GATE: G0=13/0 G1=7/0 G2=3/57 G3=6/15 G4=4/6[0m
+[0;32mI (176920) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=56[0m
+[0;32mI (177420) SHS01: GATE: G0=13/0 G1=11/0 G2=6/53 G3=7/14 G4=5/5[0m
+[0;32mI (178420) SHS01: GATE: G0=13/0 G1=6/0 G2=3/50 G3=8/12 G4=5/5[0m
+[0;32mI (179420) SHS01: GATE: G0=14/0 G1=5/0 G2=7/44 G3=7/10 G4=5/5[0m
+[0;32mI (180420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (180420) SHS01: GATE: G0=14/0 G1=8/0 G2=4/41 G3=1/8 G4=6/4[0m
+[0;32mI (181420) SHS01: GATE: G0=14/0 G1=6/0 G2=3/33 G3=3/9 G4=7/4[0m
+[0;32mI (182420) SHS01: GATE: G0=14/0 G1=5/0 G2=3/32 G3=8/10 G4=6/5[0m
+[0;32mI (183420) SHS01: GATE: G0=13/0 G1=7/0 G2=8/34 G3=9/12 G4=6/7[0m
+[0;32mI (184420) SHS01: GATE: G0=14/0 G1=5/0 G2=6/37 G3=7/13 G4=6/7[0m
+[0;32mI (185420) SHS01: GATE: G0=14/0 G1=7/0 G2=3/42 G3=8/13 G4=6/6[0m
+[0;32mI (186420) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=40[0m
+[0;32mI (186420) SHS01: GATE: G0=15/0 G1=4/0 G2=6/40 G3=3/13 G4=6/6[0m
+[0;32mI (187420) SHS01: GATE: G0=14/0 G1=7/0 G2=5/36 G3=5/11 G4=5/5[0m
+[0;32mI (188420) SHS01: GATE: G0=13/0 G1=6/0 G2=10/31 G3=6/9 G4=8/5[0m
+[0;32mI (189420) SHS01: GATE: G0=20/0 G1=6/0 G2=4/35 G3=2/9 G4=8/8[0m
+[0;32mI (190420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (190420) SHS01: GATE: G0=15/0 G1=12/0 G2=4/36 G3=7/10 G4=7/8[0m
+[0;32mI (191420) SHS01: GATE: G0=14/0 G1=5/0 G2=4/34 G3=3/11 G4=9/10[0m
+[0;32mI (192420) SHS01: GATE: G0=15/0 G1=10/0 G2=4/35 G3=3/14 G4=8/12[0m
+[0;32mI (193420) SHS01: GATE: G0=14/0 G1=7/0 G2=3/26 G3=7/14 G4=4/12[0m
+[0;32mI (194420) SHS01: GATE: G0=14/0 G1=8/0 G2=6/26 G3=6/14 G4=4/12[0m
+[0;32mI (195420) SHS01: GATE: G0=13/0 G1=7/0 G2=10/30 G3=8/15 G4=1/11[0m
+[0;32mI (195620) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=31[0m
+[0;32mI (196420) SHS01: GATE: G0=13/0 G1=6/0 G2=2/32 G3=9/14 G4=5/9[0m
+[0;32mI (197420) SHS01: GATE: G0=13/0 G1=8/0 G2=8/44 G3=3/15 G4=5/10[0m
+[0;32mI (198420) SHS01: GATE: G0=13/0 G1=6/0 G2=6/45 G3=9/14 G4=4/9[0m
+[0;32mI (199420) SHS01: GATE: G0=13/0 G1=5/0 G2=3/51 G3=5/14 G4=4/9[0m
+[0;32mI (200420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (200420) SHS01: GATE: G0=13/0 G1=7/0 G2=14/55 G3=9/14 G4=8/9[0m
+[0;32mI (201420) SHS01: GATE: G0=13/0 G1=4/0 G2=13/51 G3=10/13 G4=4/8[0m
+[0;32mI (202420) SHS01: GATE: G0=19/0 G1=13/0 G2=6/58 G3=4/14 G4=5/8[0m
+[0;32mI (203420) SHS01: GATE: G0=17/0 G1=9/0 G2=3/55 G3=5/13 G4=4/7[0m
+[0;32mI (204420) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=45[0m
+[0;32mI (204420) SHS01: GATE: G0=14/0 G1=8/0 G2=3/45 G3=5/12 G4=3/5[0m
+[0;32mI (205420) SHS01: GATE: G0=15/0 G1=10/0 G2=7/44 G3=7/11 G4=6/5[0m
+[0;32mI (206420) SHS01: GATE: G0=13/0 G1=5/0 G2=7/39 G3=4/10 G4=5/6[0m
+[0;32mI (207420) SHS01: GATE: G0=15/0 G1=8/0 G2=8/38 G3=4/11 G4=7/7[0m
+[0;32mI (208420) SHS01: GATE: G0=14/0 G1=8/0 G2=5/42 G3=7/11 G4=6/9[0m
+[0;32mI (209420) SHS01: GATE: G0=13/0 G1=8/0 G2=3/33 G3=5/11 G4=6/8[0m
+[0;32mI (210420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (210420) SHS01: GATE: G0=13/0 G1=6/0 G2=5/25 G3=3/8 G4=5/6[0m
+[0;32mI (211420) SHS01: GATE: G0=14/0 G1=6/0 G2=2/18 G3=4/8 G4=4/5[0m
+[0;32mI (212420) SHS01: GATE: G0=13/0 G1=4/0 G2=3/12 G3=6/9 G4=4/4[0m
+[0;32mI (213420) SHS01: GATE: G0=14/0 G1=5/0 G2=5/16 G3=5/10 G4=2/4[0m
+[0;32mI (214120) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=16[0m
+[0;32mI (214420) SHS01: GATE: G0=25/0 G1=9/0 G2=6/16 G3=5/11 G4=2/4[0m
+[0;32mI (215420) SHS01: GATE: G0=13/0 G1=8/0 G2=7/15 G3=4/10 G4=3/3[0m
+[0;32mI (216420) SHS01: GATE: G0=13/0 G1=9/0 G2=7/27 G3=2/12 G4=7/5[0m
+[0;32mI (217420) SHS01: GATE: G0=14/0 G1=6/0 G2=3/31 G3=5/12 G4=5/7[0m
+[0;32mI (218420) SHS01: GATE: G0=13/0 G1=5/0 G2=2/35 G3=5/11 G4=7/8[0m
+[0;32mI (219420) SHS01: GATE: G0=13/0 G1=4/0 G2=3/36 G3=6/11 G4=6/9[0m
+[0;32mI (220420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (220420) SHS01: GATE: G0=13/0 G1=6/0 G2=5/24 G3=5/7 G4=7/7[0m
+[0;32mI (221420) SHS01: GATE: G0=17/0 G1=13/0 G2=11/28 G3=1/7 G4=7/6[0m
+[0;32mI (222420) SHS01: GATE: G0=13/0 G1=6/0 G2=3/35 G3=3/8 G4=7/6[0m
+[0;32mI (223420) SHS01: GATE: G0=13/0 G1=9/0 G2=9/43 G3=8/10 G4=9/7[0m
+[0;32mI (224420) SHS01: GATE: G0=13/0 G1=6/0 G2=3/52 G3=6/13 G4=6/8[0m
+[0;32mI (224620) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=53[0m
+[0;32mI (225420) SHS01: GATE: G0=13/0 G1=6/0 G2=4/46 G3=6/14 G4=8/8[0m
+[0;32mI (226420) SHS01: GATE: G0=18/0 G1=5/0 G2=4/45 G3=6/15 G4=8/8[0m
+[0;32mI (227420) SHS01: GATE: G0=14/0 G1=5/0 G2=6/46 G3=6/15 G4=7/6[0m
+[0;32mI (228420) SHS01: GATE: G0=13/0 G1=8/0 G2=7/48 G3=4/16 G4=7/7[0m
+[0;32mI (229420) SHS01: GATE: G0=14/0 G1=5/0 G2=5/50 G3=6/15 G4=7/7[0m
+[0;32mI (230420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (230420) SHS01: GATE: G0=13/0 G1=5/0 G2=4/43 G3=6/13 G4=7/6[0m
+[0;32mI (231420) SHS01: GATE: G0=13/0 G1=6/0 G2=4/39 G3=5/11 G4=8/7[0m
+[0;32mI (232420) SHS01: GATE: G0=19/0 G1=8/0 G2=7/32 G3=4/7 G4=8/5[0m
+[0;32mI (233420) SHS01: GATE: G0=17/0 G1=7/0 G2=3/29 G3=4/5 G4=8/4[0m
+[0;32mI (234420) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=31[0m
+[0;32mI (234420) SHS01: GATE: G0=14/0 G1=4/0 G2=5/31 G3=4/5 G4=8/4[0m
+[0;32mI (235420) SHS01: GATE: G0=13/0 G1=4/0 G2=5/28 G3=2/5 G4=9/4[0m
+[0;32mI (236420) SHS01: GATE: G0=14/0 G1=6/0 G2=6/25 G3=4/5 G4=8/3[0m
+[0;32mI (237420) SHS01: GATE: G0=14/0 G1=9/0 G2=9/33 G3=10/10 G4=3/6[0m
+[0;32mI (238420) SHS01: GATE: G0=15/0 G1=6/0 G2=3/43 G3=2/14 G4=4/7[0m
+[0;32mI (239420) SHS01: GATE: G0=18/0 G1=14/0 G2=5/46 G3=9/16 G4=6/8[0m
+[0;32mI (240420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (240420) SHS01: GATE: G0=19/0 G1=7/0 G2=3/54 G3=7/18 G4=9/10[0m
+[0;32mI (241420) SHS01: GATE: G0=14/0 G1=11/0 G2=9/48 G3=4/15 G4=4/9[0m
+[0;32mI (242420) SHS01: GATE: G0=17/0 G1=5/0 G2=4/55 G3=9/14 G4=6/9[0m
+[0;32mI (243420) SHS01: GATE: G0=13/0 G1=5/0 G2=4/54 G3=5/14 G4=5/8[0m
+[0;32mI (243520) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=53[0m
+[0;32mI (244420) SHS01: GATE: G0=15/0 G1=6/0 G2=4/47 G3=7/13 G4=4/6[0m
+[0;32mI (245420) SHS01: GATE: G0=13/0 G1=7/0 G2=5/44 G3=8/12 G4=5/5[0m
+[0;32mI (246420) SHS01: GATE: G0=15/0 G1=13/0 G2=6/33 G3=6/10 G4=4/6[0m
+[0;32mI (247420) SHS01: GATE: G0=19/0 G1=19/0 G2=8/38 G3=4/10 G4=7/7[0m
+[0;32mI (248420) SHS01: GATE: G0=13/0 G1=7/0 G2=6/42 G3=3/10 G4=6/8[0m
+[0;32mI (249420) SHS01: GATE: G0=13/0 G1=13/0 G2=10/47 G3=7/11 G4=7/9[0m
+[0;32mI (250420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (250420) SHS01: GATE: G0=13/0 G1=14/0 G2=13/50 G3=1/11 G4=8/9[0m
+[0;32mI (251420) SHS01: GATE: G0=13/0 G1=15/0 G2=13/49 G3=4/10 G4=8/8[0m
+[0;32mI (252220) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=53[0m
+[0;32mI (252420) SHS01: GATE: G0=13/0 G1=4/0 G2=3/51 G3=3/10 G4=7/7[0m
+[0;32mI (253420) SHS01: GATE: G0=20/0 G1=16/0 G2=7/50 G3=7/10 G4=5/8[0m
+[0;32mI (254420) SHS01: GATE: G0=14/0 G1=19/0 G2=14/51 G3=9/10 G4=5/7[0m
+[0;32mI (255420) SHS01: GATE: G0=13/0 G1=4/0 G2=6/50 G3=5/10 G4=5/7[0m
+[0;32mI (256420) SHS01: GATE: G0=13/0 G1=18/0 G2=4/49 G3=7/11 G4=5/6[0m
+[0;32mI (257420) SHS01: GATE: G0=18/0 G1=7/0 G2=8/50 G3=5/11 G4=5/5[0m
+[0;32mI (258420) SHS01: GATE: G0=13/0 G1=8/0 G2=5/44 G3=4/11 G4=5/5[0m
+[0;32mI (259420) SHS01: GATE: G0=13/0 G1=8/0 G2=5/47 G3=6/12 G4=4/6[0m
+[0;32mI (260420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (260420) SHS01: GATE: G0=18/0 G1=6/0 G2=5/44 G3=6/12 G4=5/7[0m
+[0;32mI (260920) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=41[0m
+[0;32mI (261420) SHS01: GATE: G0=13/0 G1=5/0 G2=3/35 G3=4/11 G4=3/7[0m
+[0;32mI (262420) SHS01: GATE: G0=15/0 G1=4/0 G2=3/31 G3=5/10 G4=3/8[0m
+[0;32mI (263420) SHS01: GATE: G0=13/0 G1=7/0 G2=6/21 G3=4/8 G4=7/7[0m
+[0;32mI (264420) SHS01: GATE: G0=13/0 G1=14/0 G2=9/23 G3=5/8 G4=5/8[0m
+[0;32mI (265420) SHS01: GATE: G0=16/0 G1=19/0 G2=14/36 G3=6/8 G4=6/9[0m
+[0;32mI (266420) SHS01: GATE: G0=13/0 G1=12/0 G2=12/43 G3=7/10 G4=4/9[0m
+[0;32mI (267420) SHS01: GATE: G0=14/0 G1=21/0 G2=9/49 G3=10/11 G4=3/9[0m
+[0;32mI (268420) SHS01: GATE: G0=13/0 G1=6/0 G2=8/50 G3=7/12 G4=6/8[0m
+[0;32mI (268520) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=49[0m
+[0;32mI (269420) SHS01: GATE: G0=13/0 G1=12/0 G2=4/45 G3=7/16 G4=6/8[0m
+[0;32mI (270420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (270420) SHS01: GATE: G0=19/0 G1=7/0 G2=4/37 G3=8/16 G4=3/8[0m
+[0;32mI (271420) SHS01: GATE: G0=16/0 G1=14/0 G2=10/37 G3=8/16 G4=6/8[0m
+[0;32mI (272420) SHS01: GATE: G0=14/0 G1=5/0 G2=7/39 G3=4/16 G4=8/9[0m
+[0;32mI (273420) SHS01: GATE: G0=13/0 G1=10/0 G2=6/38 G3=5/12 G4=7/8[0m
+[0;32mI (274420) SHS01: GATE: G0=13/0 G1=4/0 G2=5/40 G3=8/12 G4=6/8[0m
+[0;32mI (275420) SHS01: GATE: G0=13/0 G1=18/0 G2=4/40 G3=7/13 G4=5/7[0m
+[0;32mI (276420) SHS01: GATE: G0=14/0 G1=5/0 G2=4/43 G3=7/13 G4=5/7[0m
+[0;32mI (277420) SHS01: GATE: G0=14/0 G1=10/0 G2=6/43 G3=6/14 G4=5/7[0m
+[0;32mI (278120) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=46[0m
+[0;32mI (278420) SHS01: GATE: G0=15/0 G1=6/0 G2=5/48 G3=7/15 G4=4/8[0m
+[0;32mI (279420) SHS01: GATE: G0=14/0 G1=6/0 G2=6/52 G3=10/14 G4=7/9[0m
+[0;32mI (280420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (280420) SHS01: GATE: G0=13/0 G1=10/0 G2=6/48 G3=7/14 G4=5/9[0m
+[0;32mI (281420) SHS01: GATE: G0=14/0 G1=5/0 G2=6/47 G3=6/15 G4=4/9[0m
+[0;32mI (282420) SHS01: GATE: G0=13/0 G1=13/0 G2=11/47 G3=1/16 G4=5/8[0m
+[0;32mI (283420) SHS01: GATE: G0=19/0 G1=8/0 G2=4/44 G3=3/18 G4=7/8[0m
+[0;32mI (284420) SHS01: GATE: G0=13/0 G1=7/0 G2=3/40 G3=4/18 G4=6/9[0m
+[0;32mI (285420) SHS01: GATE: G0=14/0 G1=10/0 G2=8/40 G3=3/20 G4=5/11[0m
+[0;32mI (286420) SHS01: GATE: G0=13/0 G1=4/0 G2=3/37 G3=7/17 G4=4/10[0m
+[0;32mI (287020) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=35[0m
+[0;32mI (287420) SHS01: GATE: G0=14/0 G1=4/0 G2=7/32 G3=4/14 G4=7/9[0m
+[0;32mI (288420) SHS01: GATE: G0=13/0 G1=8/0 G2=5/33 G3=5/13 G4=7/8[0m
+[0;32mI (289420) SHS01: GATE: G0=13/0 G1=6/0 G2=4/32 G3=9/10 G4=4/6[0m
+[0;32mI (290420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (290420) SHS01: GATE: G0=13/0 G1=10/0 G2=6/36 G3=4/11 G4=5/7[0m
+[0;32mI (291420) SHS01: GATE: G0=13/0 G1=12/0 G2=4/44 G3=3/13 G4=8/8[0m
+[0;32mI (292420) SHS01: GATE: G0=13/0 G1=6/0 G2=10/50 G3=7/14 G4=7/8[0m
+[0;32mI (293420) SHS01: GATE: G0=15/0 G1=9/0 G2=7/52 G3=3/14 G4=7/8[0m
+[0;32mI (294420) SHS01: GATE: G0=14/0 G1=9/0 G2=9/51 G3=5/14 G4=5/9[0m
+[0;32mI (295420) SHS01: GATE: G0=14/0 G1=21/0 G2=12/49 G3=1/12 G4=6/7[0m
+[0;32mI (296420) SHS01: GATE: G0=17/0 G1=22/0 G2=9/49 G3=3/12 G4=7/7[0m
+[0;32mI (297420) SHS01: GATE: G0=15/0 G1=12/0 G2=5/47 G3=4/12 G4=6/7[0m
+[0;32mI (297720) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=46[0m
+[0;32mI (298420) SHS01: GATE: G0=13/0 G1=10/0 G2=3/53 G3=6/14 G4=7/7[0m
+[0;32mI (299420) SHS01: GATE: G0=13/0 G1=19/0 G2=14/59 G3=6/14 G4=7/8[0m
+[0;32mI (300420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (300420) SHS01: GATE: G0=17/0 G1=26/0 G2=15/62 G3=6/15 G4=5/9[0m
+[0;32mI (301420) SHS01: GATE: G0=13/0 G1=7/0 G2=10/65 G3=9/14 G4=4/8[0m
+[0;32mI (302420) SHS01: GATE: G0=14/0 G1=4/0 G2=6/56 G3=6/14 G4=8/9[0m
+[0;32mI (303420) SHS01: GATE: G0=13/0 G1=12/0 G2=8/53 G3=2/14 G4=6/9[0m
+[0;32mI (304420) SHS01: GATE: G0=13/0 G1=5/0 G2=6/55 G3=4/16 G4=6/9[0m
+[0;32mI (305420) SHS01: GATE: G0=13/0 G1=8/0 G2=8/52 G3=7/17 G4=7/8[0m
+[0;32mI (305720) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=49[0m
+[0;32mI (306420) SHS01: GATE: G0=13/0 G1=5/0 G2=5/49 G3=5/14 G4=6/7[0m
+[0;32mI (307420) SHS01: GATE: G0=13/0 G1=6/0 G2=4/37 G3=4/11 G4=7/6[0m
+[0;32mI (308420) SHS01: GATE: G0=13/0 G1=4/0 G2=4/25 G3=4/9 G4=6/5[0m
+[0;32mI (309420) SHS01: GATE: G0=16/0 G1=6/0 G2=7/16 G3=5/6 G4=7/4[0m
+[0;32mI (310420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (310420) SHS01: GATE: G0=13/0 G1=5/0 G2=5/12 G3=6/5 G4=6/4[0m
+[0;32mI (311420) SHS01: GATE: G0=13/0 G1=11/0 G2=9/18 G3=4/6 G4=5/4[0m
+[0;32mI (312420) SHS01: GATE: G0=13/0 G1=5/0 G2=5/22 G3=5/6 G4=5/4[0m
+[0;32mI (313420) SHS01: GATE: G0=13/0 G1=6/0 G2=4/29 G3=7/7 G4=4/4[0m
+[0;32mI (314420) SHS01: GATE: G0=13/0 G1=11/0 G2=5/33 G3=7/8 G4=6/5[0m
+[0;32mI (314500) LD2410: Set gate 0 sensitivity: move=43, still=50[0m
+[0;32mI (314520) SHS01: Set Gate 0 move sensitivity = 43[0m
+[0;32mI (314720) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=38[0m
+[0;32mI (315420) SHS01: GATE: G0=18/0 G1=32/0 G2=18/43 G3=2/8 G4=5/5[0m
+[0;32mI (316420) SHS01: GATE: G0=13/0 G1=8/0 G2=10/45 G3=1/9 G4=7/6[0m
+[0;32mI (317420) SHS01: GATE: G0=14/0 G1=11/0 G2=11/53 G3=8/10 G4=3/6[0m
+[0;32mI (318420) SHS01: GATE: G0=14/0 G1=7/0 G2=4/64 G3=6/12 G4=7/7[0m
+[0;32mI (319420) SHS01: GATE: G0=14/0 G1=5/0 G2=2/61 G3=2/13 G4=8/7[0m
+[0;32mI (320420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (320420) SHS01: GATE: G0=14/0 G1=7/0 G2=4/60 G3=5/11 G4=6/6[0m
+[0;32mI (321420) SHS01: GATE: G0=14/0 G1=5/0 G2=5/58 G3=5/10 G4=8/6[0m
+[0;32mI (322420) SHS01: GATE: G0=14/0 G1=12/0 G2=4/52 G3=4/9 G4=7/7[0m
+[0;32mI (323020) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=49[0m
+[0;32mI (323420) SHS01: GATE: G0=13/0 G1=4/0 G2=4/45 G3=4/8 G4=7/7[0m
+[0;32mI (324420) SHS01: GATE: G0=13/0 G1=4/0 G2=6/41 G3=3/8 G4=7/6[0m
+[0;32mI (325420) SHS01: GATE: G0=15/0 G1=7/0 G2=5/29 G3=3/7 G4=6/5[0m
+[0;32mI (326420) SHS01: GATE: G0=13/0 G1=7/0 G2=3/25 G3=3/6 G4=7/4[0m
+[0;32mI (327420) SHS01: GATE: G0=13/0 G1=7/0 G2=5/23 G3=3/5 G4=7/3[0m
+[0;32mI (328420) SHS01: GATE: G0=13/0 G1=6/0 G2=6/21 G3=3/4 G4=6/3[0m
+[0;32mI (329420) SHS01: GATE: G0=13/0 G1=8/0 G2=2/24 G3=2/4 G4=7/3[0m
+[0;32mI (330420) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (330420) SHS01: GATE: G0=13/0 G1=6/0 G2=6/22 G3=3/4 G4=6/3[0m
+[0;32mI (331420) SHS01: GATE: G0=13/0 G1=5/0 G2=4/27 G3=4/6 G4=6/3[0m
+[0;32mI (331720) LD2410: Set gate 0 sensitivity: move=50, still=50[0m
+[0;32mI (331740) SHS01: Set Gate 0 move sensitivity = 50[0m
+[0;32mI (332520) SHS01: GATE: G0=13/0 G1=8/0 G2=5/37 G3=9/10 G4=5/4[0m
+[0;32mI (333520) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=67 mv_e=0 st_d=67 st_e=43[0m
+[0;32mI (333520) SHS01: GATE: G0=13/0 G1=12/0 G2=3/43 G3=5/11 G4=5/5[0m
+[0;32mI (334520) SHS01: GATE: G0=13/0 G1=10/0 G2=8/55 G3=8/13 G4=6/5[0m
+[0;32mI (334940) LD2410: Set gate 0 sensitivity: move=0, still=50[0m
+[0;32mI (334960) SHS01: Set Gate 0 move sensitivity = 0[0m
+[0;32mI (335020) SHS01: Moving Target -> DETECTED (raw=1, dist=30cm, energy=16)[0m
+[0;32mI (335020) SHS01: Static Target -> DETECTED (dist=67cm, energy=55)[0m
+[0;32mI (335020) SHS01: Occupancy -> DETECTED (mv=1 st=1)[0m
+[0;32mI (335620) SHS01: GATE: G0=13/0 G1=7/0 G2=11/57 G3=3/16 G4=6/6[0m
+[0;32mI (336620) SHS01: GATE: G0=13/0 G1=11/0 G2=8/57 G3=6/14 G4=7/6[0m
+[0;32mI (337620) SHS01: GATE: G0=13/0 G1=6/0 G2=5/56 G3=6/14 G4=5/6[0m
+[0;32mI (337860) LD2410: Set gate 0 sensitivity: move=0, still=0[0m
+[0;32mI (337880) SHS01: Set Gate 0 still sensitivity = 0[0m
+[0;32mI (338220) SHS01: Static Target -> CLEAR (dist=30cm, energy=50)[0m
+[0;32mI (338620) SHS01: GATE: G0=13/0 G1=11/0 G2=7/47 G3=4/11 G4=6/5[0m
+[0;32mI (339320) SHS01: RAW: state=0x01 mv=1 st=0 mv_d=30 mv_e=13 st_d=30 st_e=45[0m
+[0;32mI (339620) SHS01: GATE: G0=13/0 G1=5/0 G2=6/46 G3=5/10 G4=5/5[0m
+[0;32mI (340620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (340620) SHS01: GATE: G0=13/0 G1=9/0 G2=8/50 G3=6/12 G4=5/5[0m
+[0;32mI (340820) SHS01: Static Target -> DETECTED (dist=30cm, energy=51)[0m
+[0;32mI (341620) SHS01: GATE: G0=13/0 G1=6/0 G2=12/61 G3=3/14 G4=4/6[0m
+[0;32mI (342620) SHS01: GATE: G0=14/0 G1=16/0 G2=18/69 G3=3/17 G4=2/8[0m
+[0;32mI (343620) SHS01: GATE: G0=14/0 G1=11/0 G2=8/76 G3=7/15 G4=3/8[0m
+[0;32mI (344620) SHS01: GATE: G0=14/0 G1=11/0 G2=8/67 G3=8/14 G4=4/8[0m
+[0;32mI (344720) SHS01: RAW: state=0x03 mv=1 st=1 mv_d=30 mv_e=13 st_d=30 st_e=66[0m
+[0;32mI (345620) SHS01: GATE: G0=13/0 G1=11/0 G2=5/61 G3=7/13 G4=6/8[0m
+[0;32mI (346620) SHS01: GATE: G0=13/0 G1=8/0 G2=12/52 G3=9/11 G4=5/8[0m
+[0;32mI (346720) SHS01: Static Target -> CLEAR (dist=30cm, energy=50)[0m
+[0;32mI (347620) SHS01: GATE: G0=14/0 G1=9/0 G2=7/44 G3=7/12 G4=5/8[0m
+[0;32mI (348620) SHS01: GATE: G0=13/0 G1=4/0 G2=6/45 G3=7/12 G4=4/8[0m
+[0;32mI (349620) SHS01: GATE: G0=15/0 G1=7/0 G2=5/44 G3=8/12 G4=5/8[0m
+[0;32mI (349920) SHS01: RAW: state=0x01 mv=1 st=0 mv_d=30 mv_e=15 st_d=30 st_e=43[0m
+[0;32mI (350620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (350620) SHS01: GATE: G0=13/0 G1=4/0 G2=6/45 G3=7/13 G4=5/7[0m
+[0;32mI (351620) SHS01: GATE: G0=15/0 G1=7/0 G2=10/40 G3=1/13 G4=8/7[0m
+[0;32mI (352620) SHS01: GATE: G0=13/0 G1=6/0 G2=4/38 G3=5/14 G4=6/8[0m
+[0;32mI (353620) SHS01: GATE: G0=14/0 G1=4/0 G2=5/29 G3=5/13 G4=6/7[0m
+[0;32mI (354620) SHS01: GATE: G0=14/0 G1=5/0 G2=6/25 G3=5/11 G4=7/7[0m
+[0;32mI (355420) SHS01: RAW: state=0x01 mv=1 st=0 mv_d=30 mv_e=13 st_d=30 st_e=26[0m
+[0;32mI (355620) SHS01: GATE: G0=13/0 G1=5/0 G2=6/24 G3=6/8 G4=6/5[0m
+[0;32mI (356620) SHS01: GATE: G0=15/0 G1=6/0 G2=4/22 G3=7/6 G4=5/3[0m
+[0;32mI (357620) SHS01: GATE: G0=13/0 G1=5/0 G2=8/22 G3=4/6 G4=6/3[0m
+[0;32mI (358300) LD2410: Set gate 0 sensitivity: move=0, still=49[0m
+[0;32mI (358320) SHS01: Set Gate 0 still sensitivity = 49[0m
+[0;32mI (358620) SHS01: GATE: G0=15/0 G1=6/0 G2=3/24 G3=7/8 G4=5/3[0m
+[0;32mI (359620) SHS01: GATE: G0=13/0 G1=3/0 G2=2/21 G3=7/9 G4=6/4[0m
+[0;32mI (360620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (360620) SHS01: GATE: G0=13/0 G1=4/0 G2=3/22 G3=6/11 G4=5/5[0m
+[0;32mI (361620) SHS01: GATE: G0=14/0 G1=4/0 G2=4/21 G3=5/10 G4=6/5[0m
+[0;32mI (362420) SHS01: RAW: state=0x01 mv=1 st=0 mv_d=30 mv_e=13 st_d=30 st_e=19[0m
+[0;32mI (362620) SHS01: GATE: G0=13/0 G1=7/0 G2=3/17 G3=7/9 G4=5/4[0m
+[0;32mI (363620) SHS01: GATE: G0=13/0 G1=4/0 G2=3/15 G3=6/7 G4=5/4[0m
+[0;32mI (364620) SHS01: GATE: G0=14/0 G1=6/0 G2=5/17 G3=5/6 G4=6/4[0m
+[0;32mI (365620) SHS01: GATE: G0=13/0 G1=6/0 G2=6/17 G3=2/6 G4=6/5[0m
+[0;32mI (366620) SHS01: GATE: G0=14/0 G1=4/0 G2=6/18 G3=4/6 G4=6/6[0m
+[0;32mI (367620) SHS01: GATE: G0=17/0 G1=13/0 G2=5/20 G3=4/6 G4=5/6[0m
+[0;32mI (367780) LD2410: Set gate 0 sensitivity: move=49, still=49[0m
+[0;32mI (367800) SHS01: Set Gate 0 move sensitivity = 49[0m
+[0;32mI (367820) SHS01: Static Target -> DETECTED (dist=30cm, energy=19)[0m
+[0;32mI (368620) SHS01: GATE: G0=13/0 G1=6/0 G2=6/18 G3=5/7 G4=4/5[0m
+[0;32mI (369620) SHS01: GATE: G0=13/0 G1=4/0 G2=5/25 G3=6/9 G4=5/5[0m
+[0;32mI (370620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (370620) SHS01: RAW: state=0x02 mv=0 st=1 mv_d=30 mv_e=0 st_d=30 st_e=29[0m
+[0;32mI (370620) SHS01: GATE: G0=13/0 G1=7/0 G2=4/29 G3=8/10 G4=7/5[0m
+[0;32mI (371620) SHS01: GATE: G0=13/0 G1=6/0 G2=3/35 G3=8/12 G4=2/7[0m
+[0;32mI (372620) SHS01: GATE: G0=13/0 G1=5/0 G2=4/34 G3=10/13 G4=4/8[0m
+[0;32mI (373620) SHS01: GATE: G0=14/0 G1=8/0 G2=7/29 G3=6/14 G4=5/10[0m
+[0;32mI (374620) SHS01: GATE: G0=15/0 G1=4/0 G2=3/25 G3=6/14 G4=4/10[0m
+[0;32mI (375620) SHS01: GATE: G0=13/0 G1=6/0 G2=4/19 G3=1/13 G4=2/9[0m
+[0;32mI (376620) SHS01: GATE: G0=13/0 G1=7/0 G2=7/22 G3=3/13 G4=4/10[0m
+[0;32mI (377620) SHS01: GATE: G0=13/0 G1=7/0 G2=4/22 G3=6/13 G4=4/8[0m
+[0;32mI (378620) SHS01: GATE: G0=14/0 G1=4/0 G2=3/25 G3=5/12 G4=5/8[0m
+[0;32mI (379620) SHS01: GATE: G0=13/0 G1=12/0 G2=6/29 G3=6/12 G4=4/7[0m
+[0;32mI (380620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (380620) SHS01: GATE: G0=13/0 G1=7/0 G2=3/32 G3=5/12 G4=6/7[0m
+[0;32mI (381620) SHS01: GATE: G0=14/0 G1=4/0 G2=5/34 G3=7/12 G4=5/8[0m
+[0;32mI (382620) SHS01: GATE: G0=17/0 G1=6/0 G2=3/35 G3=7/11 G4=5/7[0m
+[0;32mI (382720) SHS01: Moving Target -> CLEAR (raw=0, dist=30cm, energy=0)[0m
+[0;32mI (382920) SHS01: Static Target -> CLEAR (dist=30cm, energy=35)[0m
+[0;32mI (382920) SHS01: Occupancy -> CLEAR (mv=0 st=0)[0m
+[0;32mI (383320) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=33[0m
+[0;32mI (383620) SHS01: GATE: G0=16/0 G1=5/0 G2=7/32 G3=8/10 G4=4/6[0m
+[0;32mI (384620) SHS01: GATE: G0=13/0 G1=7/0 G2=7/27 G3=8/8 G4=6/6[0m
+[0;32mI (385620) SHS01: GATE: G0=13/0 G1=5/0 G2=7/21 G3=9/6 G4=5/4[0m
+[0;32mI (386620) SHS01: GATE: G0=15/0 G1=6/0 G2=5/18 G3=5/7 G4=6/4[0m
+[0;32mI (387620) SHS01: GATE: G0=16/0 G1=5/0 G2=6/18 G3=7/7 G4=3/4[0m
+[0;32mI (388620) SHS01: GATE: G0=13/0 G1=4/0 G2=8/21 G3=3/8 G4=5/4[0m
+[0;32mI (389620) SHS01: GATE: G0=19/0 G1=7/0 G2=10/33 G3=3/11 G4=7/6[0m
+[0;32mI (390620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (390620) SHS01: GATE: G0=13/0 G1=4/0 G2=3/40 G3=9/13 G4=6/7[0m
+[0;32mI (391620) SHS01: GATE: G0=13/0 G1=11/0 G2=9/46 G3=4/14 G4=7/8[0m
+[0;32mI (392320) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=53[0m
+[0;32mI (392620) SHS01: GATE: G0=13/0 G1=8/0 G2=3/53 G3=5/15 G4=5/9[0m
+[0;32mI (393620) SHS01: GATE: G0=14/0 G1=12/0 G2=7/53 G3=7/12 G4=5/7[0m
+[0;32mI (394620) SHS01: GATE: G0=13/0 G1=7/0 G2=5/54 G3=3/11 G4=6/7[0m
+[0;32mI (395620) SHS01: GATE: G0=13/0 G1=9/0 G2=7/50 G3=4/10 G4=6/7[0m
+[0;32mI (396620) SHS01: GATE: G0=13/0 G1=12/0 G2=8/47 G3=3/10 G4=4/7[0m
+[0;32mI (397620) SHS01: GATE: G0=13/0 G1=5/0 G2=7/43 G3=4/9 G4=3/7[0m
+[0;32mI (398620) SHS01: GATE: G0=13/0 G1=4/0 G2=4/40 G3=1/10 G4=4/7[0m
+[0;32mI (399620) SHS01: GATE: G0=14/0 G1=4/0 G2=7/38 G3=2/11 G4=6/6[0m
+[0;32mI (400620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (400620) SHS01: GATE: G0=13/0 G1=4/0 G2=3/33 G3=3/10 G4=6/6[0m
+[0;32mI (401620) SHS01: GATE: G0=16/0 G1=7/0 G2=4/30 G3=7/10 G4=4/6[0m
+[0;32mI (402520) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=33[0m
+[0;32mI (402620) SHS01: GATE: G0=13/0 G1=26/0 G2=15/34 G3=4/10 G4=7/6[0m
+[0;32mI (403620) SHS01: GATE: G0=13/0 G1=14/0 G2=9/38 G3=3/11 G4=9/6[0m
+[0;32mI (404620) SHS01: GATE: G0=19/0 G1=7/0 G2=3/42 G3=7/14 G4=5/7[0m
+[0;32mI (405620) SHS01: GATE: G0=13/0 G1=5/0 G2=4/44 G3=5/16 G4=6/8[0m
+[0;32mI (406620) SHS01: GATE: G0=13/0 G1=7/0 G2=7/37 G3=7/14 G4=4/7[0m
+[0;32mI (407620) SHS01: GATE: G0=13/0 G1=8/0 G2=3/31 G3=5/11 G4=6/7[0m
+[0;32mI (408620) SHS01: GATE: G0=13/0 G1=3/0 G2=7/26 G3=7/8 G4=6/6[0m
+[0;32mI (409620) SHS01: GATE: G0=13/0 G1=10/0 G2=13/26 G3=4/7 G4=6/8[0m
+[0;32mI (410620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (410620) SHS01: GATE: G0=14/0 G1=6/0 G2=6/27 G3=5/8 G4=7/8[0m
+[0;32mI (411620) SHS01: GATE: G0=13/0 G1=5/0 G2=7/35 G3=8/11 G4=5/8[0m
+[0;32mI (412120) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=41[0m
+[0;32mI (412620) SHS01: GATE: G0=20/0 G1=8/0 G2=7/43 G3=6/13 G4=7/9[0m
+[0;32mI (413620) SHS01: GATE: G0=13/0 G1=18/0 G2=9/49 G3=4/13 G4=7/8[0m
+[0;32mI (414620) SHS01: GATE: G0=13/0 G1=10/0 G2=7/52 G3=7/13 G4=4/9[0m
+[0;32mI (415620) SHS01: GATE: G0=14/0 G1=5/0 G2=4/50 G3=8/10 G4=5/10[0m
+[0;32mI (416620) SHS01: GATE: G0=13/0 G1=20/0 G2=16/51 G3=3/12 G4=5/10[0m
+[0;32mI (417620) SHS01: GATE: G0=18/0 G1=6/0 G2=5/49 G3=2/12 G4=7/10[0m
+[0;32mI (418620) SHS01: GATE: G0=13/0 G1=14/0 G2=10/48 G3=7/13 G4=3/9[0m
+[0;32mI (419620) SHS01: GATE: G0=13/0 G1=4/0 G2=4/51 G3=5/16 G4=6/9[0m
+[0;32mI (420620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (420620) SHS01: GATE: G0=16/0 G1=6/0 G2=3/44 G3=5/13 G4=6/8[0m
+[0;32mI (421420) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=38[0m
+[0;32mI (421560) LD2410: Set gate 0 sensitivity: move=50, still=49[0m
+[0;32mI (421580) SHS01: Set Gate 0 move sensitivity = 50[0m
+[0;32mI (421620) SHS01: GATE: G0=13/0 G1=7/0 G2=3/35 G3=7/12 G4=6/7[0m
+[0;32mI (422620) SHS01: GATE: G0=14/0 G1=5/0 G2=6/34 G3=8/10 G4=5/6[0m
+[0;32mI (423620) SHS01: GATE: G0=14/0 G1=5/0 G2=4/32 G3=5/8 G4=8/6[0m
+[0;32mI (424620) SHS01: GATE: G0=14/0 G1=4/0 G2=5/36 G3=4/8 G4=8/6[0m
+[0;32mI (425460) LD2410: Set gate 0 sensitivity: move=50, still=50[0m
+[0;32mI (425480) SHS01: Set Gate 0 still sensitivity = 50[0m
+[0;32mI (425620) SHS01: GATE: G0=14/0 G1=6/0 G2=7/41 G3=8/9 G4=6/6[0m
+[0;32mI (426620) SHS01: GATE: G0=14/0 G1=8/0 G2=5/38 G3=5/8 G4=7/7[0m
+[0;32mI (427620) SHS01: GATE: G0=13/0 G1=5/0 G2=3/33 G3=5/7 G4=7/5[0m
+[0;32mI (428620) SHS01: GATE: G0=13/0 G1=5/0 G2=5/27 G3=7/7 G4=6/5[0m
+[0;32mI (429620) SHS01: GATE: G0=17/0 G1=8/0 G2=8/18 G3=8/7 G4=5/5[0m
+[0;32mI (430220) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=16[0m
+[0;32mI (430620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (430620) SHS01: GATE: G0=13/0 G1=7/0 G2=7/18 G3=8/7 G4=4/4[0m
+[0;32mI (431620) SHS01: GATE: G0=16/0 G1=11/0 G2=2/23 G3=8/9 G4=5/4[0m
+[0;32mI (432620) SHS01: GATE: G0=14/0 G1=4/0 G2=7/28 G3=4/9 G4=6/6[0m
+[0;32mI (433620) SHS01: GATE: G0=14/0 G1=10/0 G2=4/32 G3=7/9 G4=7/6[0m
+[0;32mI (434620) SHS01: GATE: G0=15/0 G1=8/0 G2=4/36 G3=5/10 G4=7/7[0m
+[0;32mI (435620) SHS01: GATE: G0=16/0 G1=8/0 G2=7/41 G3=6/8 G4=5/8[0m
+[0;32mI (436620) SHS01: GATE: G0=13/0 G1=8/0 G2=3/41 G3=5/7 G4=5/7[0m
+[0;32mI (437620) SHS01: GATE: G0=13/0 G1=4/0 G2=3/39 G3=5/7 G4=4/6[0m
+[0;32mI (438620) SHS01: GATE: G0=13/0 G1=7/0 G2=4/32 G3=6/5 G4=4/5[0m
+[0;32mI (439620) SHS01: GATE: G0=13/0 G1=9/0 G2=3/18 G3=7/6 G4=3/4[0m
+[0;32mI (440620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (440620) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=18[0m
+[0;32mI (440620) SHS01: GATE: G0=14/0 G1=7/0 G2=4/18 G3=4/7 G4=6/4[0m
+[0;32mI (441620) SHS01: GATE: G0=16/0 G1=17/0 G2=7/26 G3=2/9 G4=10/7[0m
+[0;32mI (442620) SHS01: GATE: G0=14/0 G1=15/0 G2=13/38 G3=8/12 G4=7/9[0m
+[0;32mI (443620) SHS01: GATE: G0=21/0 G1=10/0 G2=5/49 G3=8/12 G4=4/9[0m
+[0;32mI (444620) SHS01: GATE: G0=13/0 G1=5/0 G2=5/50 G3=6/12 G4=5/9[0m
+[0;32mI (445620) SHS01: GATE: G0=13/0 G1=6/0 G2=3/42 G3=5/11 G4=5/7[0m
+[0;32mI (446620) SHS01: GATE: G0=14/0 G1=15/0 G2=6/35 G3=4/8 G4=6/6[0m
+[0;32mI (447320) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=37[0m
+[0;32mI (447620) SHS01: GATE: G0=13/0 G1=10/0 G2=4/38 G3=6/8 G4=8/7[0m
+[0;32mI (448620) SHS01: GATE: G0=13/0 G1=10/0 G2=4/38 G3=7/9 G4=7/8[0m
+[0;32mI (449620) SHS01: GATE: G0=20/0 G1=13/0 G2=6/46 G3=8/11 G4=5/8[0m
+[0;32mI (450620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (450620) SHS01: GATE: G0=14/0 G1=5/0 G2=7/51 G3=8/13 G4=6/7[0m
+[0;32mI (451620) SHS01: GATE: G0=13/0 G1=5/0 G2=9/44 G3=10/13 G4=5/6[0m
+[0;32mI (452620) SHS01: GATE: G0=15/0 G1=10/0 G2=3/45 G3=8/14 G4=6/6[0m
+[0;32mI (453620) SHS01: GATE: G0=13/0 G1=9/0 G2=8/48 G3=7/11 G4=8/7[0m
+[0;32mI (454620) SHS01: GATE: G0=13/0 G1=6/0 G2=11/42 G3=9/11 G4=6/7[0m
+[0;32mI (455220) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=47[0m
+[0;32mI (455620) SHS01: GATE: G0=13/0 G1=5/0 G2=4/48 G3=8/11 G4=5/7[0m
+[0;32mI (456620) SHS01: GATE: G0=14/0 G1=7/0 G2=4/48 G3=6/8 G4=6/7[0m
+[0;32mI (457620) SHS01: GATE: G0=13/0 G1=5/0 G2=5/36 G3=4/9 G4=5/4[0m
+[0;32mI (458620) SHS01: GATE: G0=14/0 G1=6/0 G2=5/32 G3=4/8 G4=5/4[0m
+[0;32mI (459620) SHS01: GATE: G0=13/0 G1=4/0 G2=6/20 G3=4/7 G4=5/3[0m
+[0;32mI (460620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (460620) SHS01: GATE: G0=13/0 G1=5/0 G2=4/12 G3=6/7 G4=4/3[0m
+[0;32mI (461620) SHS01: GATE: G0=14/0 G1=5/0 G2=4/12 G3=3/8 G4=5/3[0m
+[0;32mI (462620) SHS01: GATE: G0=18/0 G1=6/0 G2=4/18 G3=7/10 G4=8/5[0m
+[0;32mI (463620) SHS01: GATE: G0=14/0 G1=5/0 G2=3/20 G3=5/12 G4=7/5[0m
+[0;32mI (464620) SHS01: GATE: G0=15/0 G1=7/0 G2=7/27 G3=6/13 G4=7/5[0m
+[0;32mI (464720) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=28[0m
+[0;32mI (465620) SHS01: GATE: G0=15/0 G1=10/0 G2=12/32 G3=7/12 G4=8/6[0m
+[0;32mI (466620) SHS01: GATE: G0=13/0 G1=13/0 G2=10/36 G3=10/11 G4=3/6[0m
+[0;32mI (467620) SHS01: GATE: G0=13/0 G1=4/0 G2=8/40 G3=7/10 G4=4/8[0m
+[0;32mI (468620) SHS01: GATE: G0=14/0 G1=11/0 G2=3/38 G3=8/9 G4=6/9[0m
+[0;32mI (469620) SHS01: GATE: G0=13/0 G1=4/0 G2=6/38 G3=5/11 G4=8/10[0m
+[0;32mI (470620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (470620) SHS01: GATE: G0=13/0 G1=7/0 G2=4/35 G3=7/10 G4=7/9[0m
+[0;32mI (471620) SHS01: GATE: G0=14/0 G1=24/0 G2=21/44 G3=4/12 G4=7/8[0m
+[0;32mI (472620) SHS01: GATE: G0=13/0 G1=5/0 G2=10/58 G3=2/13 G4=7/8[0m
+[0;32mI (473620) SHS01: GATE: G0=14/0 G1=13/0 G2=5/63 G3=8/14 G4=6/8[0m
+[0;32mI (474320) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=66[0m
+[0;32mI (474620) SHS01: GATE: G0=15/0 G1=21/0 G2=11/67 G3=9/14 G4=4/7[0m
+[0;32mI (475620) SHS01: GATE: G0=15/0 G1=20/0 G2=4/62 G3=5/13 G4=6/7[0m
+[0;32mI (476620) SHS01: GATE: G0=16/0 G1=16/0 G2=4/55 G3=8/13 G4=6/7[0m
+[0;32mI (477620) SHS01: GATE: G0=14/0 G1=11/0 G2=6/50 G3=4/13 G4=7/6[0m
+[0;32mI (478620) SHS01: GATE: G0=13/0 G1=4/0 G2=3/47 G3=9/15 G4=3/8[0m
+[0;32mI (479620) SHS01: GATE: G0=13/0 G1=19/0 G2=13/48 G3=10/16 G4=3/9[0m
+[0;32mI (480620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (480620) SHS01: GATE: G0=14/0 G1=6/0 G2=8/44 G3=7/14 G4=6/10[0m
+[0;32mI (481620) SHS01: GATE: G0=13/0 G1=29/0 G2=18/48 G3=6/13 G4=5/9[0m
+[0;32mI (482620) SHS01: GATE: G0=13/0 G1=6/0 G2=10/48 G3=4/11 G4=5/9[0m
+[0;32mI (483620) SHS01: GATE: G0=13/0 G1=4/0 G2=5/40 G3=9/9 G4=3/8[0m
+[0;32mI (484520) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=34[0m
+[0;32mI (484620) SHS01: GATE: G0=13/0 G1=5/0 G2=4/33 G3=8/9 G4=4/7[0m
+[0;32mI (485620) SHS01: GATE: G0=19/0 G1=9/0 G2=4/22 G3=7/9 G4=6/7[0m
+[0;32mI (486620) SHS01: GATE: G0=13/0 G1=5/0 G2=7/16 G3=3/9 G4=7/7[0m
+[0;32mI (487620) SHS01: GATE: G0=13/0 G1=6/0 G2=6/14 G3=6/8 G4=7/7[0m
+[0;32mI (488620) SHS01: GATE: G0=14/0 G1=8/0 G2=3/14 G3=6/8 G4=5/7[0m
+[0;32mI (489620) SHS01: GATE: G0=15/0 G1=6/0 G2=3/15 G3=6/8 G4=7/6[0m
+[0;32mI (490620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (490620) SHS01: GATE: G0=13/0 G1=5/0 G2=4/14 G3=7/8 G4=4/4[0m
+[0;32mI (491620) SHS01: GATE: G0=16/0 G1=5/0 G2=4/19 G3=6/8 G4=3/4[0m
+[0;32mI (492620) SHS01: GATE: G0=13/0 G1=8/0 G2=7/25 G3=8/9 G4=5/6[0m
+[0;32mI (493620) SHS01: GATE: G0=23/0 G1=16/0 G2=10/43 G3=1/11 G4=4/6[0m
+[0;32mI (494120) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=48[0m
+[0;32mI (494620) SHS01: GATE: G0=15/0 G1=5/0 G2=3/53 G3=5/14 G4=5/6[0m
+[0;32mI (495620) SHS01: GATE: G0=15/0 G1=5/0 G2=4/54 G3=4/15 G4=5/6[0m
+[0;32mI (496620) SHS01: GATE: G0=15/0 G1=11/0 G2=8/52 G3=7/14 G4=3/5[0m
+[0;32mI (497620) SHS01: GATE: G0=13/0 G1=12/0 G2=9/41 G3=5/13 G4=5/6[0m
+[0;32mI (498620) SHS01: GATE: G0=17/0 G1=14/0 G2=13/38 G3=10/11 G4=2/6[0m
+[0;32mI (499620) SHS01: GATE: G0=13/0 G1=8/0 G2=10/40 G3=5/12 G4=5/7[0m
+[0;32mI (500620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (500620) SHS01: GATE: G0=13/0 G1=4/0 G2=3/44 G3=8/13 G4=6/8[0m
+[0;32mI (501620) SHS01: GATE: G0=14/0 G1=11/0 G2=4/40 G3=2/14 G4=6/8[0m
+[0;32mI (502620) SHS01: GATE: G0=13/0 G1=15/0 G2=8/42 G3=5/15 G4=5/9[0m
+[0;32mI (503120) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=47[0m
+[0;32mI (503620) SHS01: GATE: G0=13/0 G1=6/0 G2=4/46 G3=6/15 G4=5/9[0m
+[0;32mI (504620) SHS01: GATE: G0=20/0 G1=21/0 G2=12/47 G3=9/14 G4=7/8[0m
+[0;32mI (505620) SHS01: GATE: G0=14/0 G1=19/0 G2=14/55 G3=4/13 G4=6/8[0m
+[0;32mI (506620) SHS01: GATE: G0=13/0 G1=10/0 G2=4/51 G3=8/13 G4=4/9[0m
+[0;32mI (507620) SHS01: GATE: G0=14/0 G1=8/0 G2=4/51 G3=5/14 G4=3/9[0m
+[0;32mI (508620) SHS01: GATE: G0=14/0 G1=11/0 G2=7/50 G3=3/14 G4=8/9[0m
+[0;32mI (509620) SHS01: GATE: G0=13/0 G1=10/0 G2=10/52 G3=6/14 G4=6/9[0m
+[0;32mI (510620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (510620) SHS01: GATE: G0=13/0 G1=5/0 G2=4/52 G3=4/15 G4=5/9[0m
+[0;32mI (511620) SHS01: GATE: G0=13/0 G1=8/0 G2=9/48 G3=2/14 G4=5/8[0m
+[0;32mI (512620) SHS01: GATE: G0=14/0 G1=11/0 G2=13/49 G3=10/13 G4=9/9[0m
+[0;32mI (512820) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=50[0m
+[0;32mI (513620) SHS01: GATE: G0=13/0 G1=11/0 G2=5/46 G3=7/11 G4=4/10[0m
+[0;32mI (514620) SHS01: GATE: G0=13/0 G1=7/0 G2=3/45 G3=7/10 G4=3/9[0m
+[0;32mI (515620) SHS01: GATE: G0=20/0 G1=9/0 G2=6/46 G3=5/9 G4=3/10[0m
+[0;32mI (516620) SHS01: GATE: G0=17/0 G1=13/0 G2=8/45 G3=6/9 G4=5/9[0m
+[0;32mI (517620) SHS01: GATE: G0=13/0 G1=6/0 G2=4/48 G3=5/8 G4=5/9[0m
+[0;32mI (518620) SHS01: GATE: G0=13/0 G1=4/0 G2=7/49 G3=10/9 G4=3/9[0m
+[0;32mI (519620) SHS01: GATE: G0=13/0 G1=3/0 G2=4/54 G3=9/10 G4=4/9[0m
+[0;32mI (520620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (520620) SHS01: GATE: G0=13/0 G1=9/0 G2=5/53 G3=4/12 G4=6/9[0m
+[0;32mI (521220) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=47[0m
+[0;32mI (521620) SHS01: GATE: G0=13/0 G1=6/0 G2=7/44 G3=8/13 G4=5/9[0m
+[0;32mI (522620) SHS01: GATE: G0=14/0 G1=6/0 G2=9/44 G3=4/12 G4=4/10[0m
+[0;32mI (523620) SHS01: GATE: G0=13/0 G1=4/0 G2=10/41 G3=6/12 G4=6/10[0m
+[0;32mI (524620) SHS01: GATE: G0=13/0 G1=8/0 G2=5/37 G3=4/13 G4=5/10[0m
+[0;32mI (525620) SHS01: GATE: G0=15/0 G1=14/0 G2=3/40 G3=4/13 G4=7/9[0m
+[0;32mI (526620) SHS01: GATE: G0=13/0 G1=15/0 G2=7/42 G3=3/14 G4=7/8[0m
+[0;32mI (527620) SHS01: GATE: G0=13/0 G1=10/0 G2=6/39 G3=6/15 G4=5/9[0m
+[0;32mI (528620) SHS01: GATE: G0=15/0 G1=9/0 G2=3/46 G3=5/14 G4=8/9[0m
+[0;32mI (529620) SHS01: GATE: G0=14/0 G1=8/0 G2=7/49 G3=6/16 G4=5/10[0m
+[0;32mI (530620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (530620) SHS01: GATE: G0=14/0 G1=6/0 G2=4/48 G3=7/15 G4=4/10[0m
+[0;32mI (531020) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=51[0m
+[0;32mI (531620) SHS01: GATE: G0=17/0 G1=18/0 G2=9/54 G3=4/14 G4=6/10[0m
+[0;32mI (532620) SHS01: GATE: G0=18/0 G1=30/0 G2=17/56 G3=7/15 G4=5/10[0m
+[0;32mI (533620) SHS01: GATE: G0=17/0 G1=5/0 G2=4/56 G3=8/12 G4=5/9[0m
+[0;32mI (534620) SHS01: GATE: G0=13/0 G1=19/0 G2=4/53 G3=6/10 G4=4/8[0m
+[0;32mI (535620) SHS01: GATE: G0=14/0 G1=17/0 G2=8/46 G3=4/10 G4=5/8[0m
+[0;32mI (536620) SHS01: GATE: G0=13/0 G1=12/0 G2=8/40 G3=3/9 G4=6/8[0m
+[0;32mI (537620) SHS01: GATE: G0=15/0 G1=6/0 G2=4/34 G3=10/10 G4=4/9[0m
+[0;32mI (538620) SHS01: GATE: G0=13/0 G1=18/0 G2=11/33 G3=8/11 G4=8/9[0m
+[0;32mI (539620) SHS01: GATE: G0=13/0 G1=10/0 G2=10/33 G3=7/12 G4=6/10[0m
+[0;32mI (540420) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=38[0m
+[0;32mI (540620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (540620) SHS01: GATE: G0=13/0 G1=8/0 G2=5/37 G3=9/14 G4=5/11[0m
+[0;32mI (541620) SHS01: GATE: G0=14/0 G1=10/0 G2=5/44 G3=4/15 G4=7/11[0m
+[0;32mI (542620) SHS01: GATE: G0=13/0 G1=8/0 G2=7/47 G3=5/16 G4=7/12[0m
+[0;32mI (543620) SHS01: GATE: G0=15/0 G1=10/0 G2=8/44 G3=4/15 G4=9/13[0m
+[0;32mI (544620) SHS01: GATE: G0=14/0 G1=9/0 G2=4/39 G3=5/14 G4=5/12[0m
+[0;32mI (545620) SHS01: GATE: G0=13/0 G1=6/0 G2=7/32 G3=6/13 G4=5/11[0m
+[0;32mI (546620) SHS01: GATE: G0=15/0 G1=9/0 G2=6/28 G3=6/10 G4=5/9[0m
+[0;32mI (547620) SHS01: GATE: G0=13/0 G1=5/0 G2=3/27 G3=7/9 G4=3/7[0m
+[0;32mI (548620) SHS01: GATE: G0=16/0 G1=4/0 G2=7/26 G3=5/8 G4=5/6[0m
+[0;32mI (549620) SHS01: GATE: G0=13/0 G1=11/0 G2=6/22 G3=5/8 G4=3/6[0m
+[0;32mI (550420) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=18[0m
+[0;32mI (550620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (550620) SHS01: GATE: G0=13/0 G1=7/0 G2=3/18 G3=4/8 G4=4/7[0m
+[0;32mI (551620) SHS01: GATE: G0=13/0 G1=8/0 G2=5/16 G3=8/8 G4=4/6[0m
+[0;32mI (552620) SHS01: GATE: G0=14/0 G1=7/0 G2=11/16 G3=5/10 G4=5/8[0m
+[0;32mI (553620) SHS01: GATE: G0=13/0 G1=5/0 G2=3/26 G3=8/10 G4=3/8[0m
+[0;32mI (554620) SHS01: GATE: G0=13/0 G1=9/0 G2=3/33 G3=7/11 G4=4/10[0m
+[0;32mI (555620) SHS01: GATE: G0=13/0 G1=10/0 G2=4/38 G3=8/12 G4=4/10[0m
+[0;32mI (556620) SHS01: GATE: G0=13/0 G1=5/0 G2=3/38 G3=8/12 G4=4/10[0m
+[0;32mI (557620) SHS01: GATE: G0=14/0 G1=6/0 G2=4/33 G3=5/12 G4=7/10[0m
+[0;32mI (558620) SHS01: GATE: G0=15/0 G1=7/0 G2=3/28 G3=1/12 G4=9/9[0m
+[0;32mI (559520) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=25[0m
+[0;32mI (559620) SHS01: GATE: G0=14/0 G1=7/0 G2=6/24 G3=4/12 G4=6/10[0m
+[0;32mI (560620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (560620) SHS01: GATE: G0=13/0 G1=6/0 G2=6/24 G3=2/11 G4=6/10[0m
+[0;32mI (561620) SHS01: GATE: G0=15/0 G1=7/0 G2=9/28 G3=2/10 G4=6/9[0m
+[0;32mI (562620) SHS01: GATE: G0=15/0 G1=12/0 G2=4/34 G3=5/9 G4=7/8[0m
+[0;32mI (563620) SHS01: GATE: G0=16/0 G1=7/0 G2=3/37 G3=4/9 G4=8/6[0m
+[0;32mI (564620) SHS01: GATE: G0=18/0 G1=6/0 G2=4/35 G3=3/9 G4=10/6[0m
+[0;32mI (565620) SHS01: GATE: G0=16/0 G1=6/0 G2=9/31 G3=7/9 G4=7/7[0m
+[0;32mI (566620) SHS01: GATE: G0=14/0 G1=8/0 G2=5/31 G3=5/10 G4=7/7[0m
+[0;32mI (567620) SHS01: GATE: G0=13/0 G1=6/0 G2=7/29 G3=5/10 G4=8/7[0m
+[0;32mI (568620) SHS01: GATE: G0=13/0 G1=6/0 G2=7/27 G3=6/9 G4=4/7[0m
+[0;32mI (569620) SHS01: GATE: G0=14/0 G1=9/0 G2=9/31 G3=2/10 G4=10/8[0m
+[0;32mI (570620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (570620) SHS01: GATE: G0=14/0 G1=6/0 G2=8/31 G3=7/10 G4=1/9[0m
+[0;32mI (570920) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=34[0m
+[0;32mI (571620) SHS01: GATE: G0=13/0 G1=7/0 G2=7/38 G3=6/13 G4=2/9[0m
+[0;32mI (572620) SHS01: GATE: G0=13/0 G1=4/0 G2=3/41 G3=6/17 G4=2/9[0m
+[0;32mI (573620) SHS01: GATE: G0=13/0 G1=3/0 G2=5/35 G3=2/17 G4=2/8[0m
+[0;32mI (574620) SHS01: GATE: G0=14/0 G1=8/0 G2=8/27 G3=4/16 G4=4/5[0m
+[0;32mI (575620) SHS01: GATE: G0=14/0 G1=11/0 G2=7/29 G3=5/14 G4=5/4[0m
+[0;32mI (576620) SHS01: GATE: G0=14/0 G1=4/0 G2=4/34 G3=6/13 G4=5/6[0m
+[0;32mI (577620) SHS01: GATE: G0=13/0 G1=5/0 G2=8/34 G3=6/12 G4=6/7[0m
+[0;32mI (578620) SHS01: GATE: G0=17/0 G1=7/0 G2=4/32 G3=8/12 G4=2/7[0m
+[0;32mI (579620) SHS01: GATE: G0=13/0 G1=3/0 G2=4/25 G3=4/11 G4=2/8[0m
+[0;32mI (580620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (580620) SHS01: GATE: G0=13/0 G1=5/0 G2=4/21 G3=4/8 G4=3/6[0m
+[0;32mI (581620) SHS01: GATE: G0=14/0 G1=12/0 G2=3/20 G3=4/8 G4=6/6[0m
+[0;32mI (582220) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=23[0m
+[0;32mI (582620) SHS01: GATE: G0=15/0 G1=9/0 G2=3/25 G3=7/7 G4=7/6[0m
+[0;32mI (583620) SHS01: GATE: G0=13/0 G1=5/0 G2=4/23 G3=4/6 G4=7/6[0m
+[0;32mI (584620) SHS01: GATE: G0=14/0 G1=10/0 G2=9/25 G3=5/7 G4=6/6[0m
+[0;32mI (585620) SHS01: GATE: G0=13/0 G1=4/0 G2=5/24 G3=7/7 G4=6/5[0m
+[0;32mI (586620) SHS01: GATE: G0=13/0 G1=5/0 G2=5/21 G3=7/8 G4=5/6[0m
+[0;32mI (587620) SHS01: GATE: G0=14/0 G1=6/0 G2=6/19 G3=5/8 G4=6/6[0m
+[0;32mI (588620) SHS01: GATE: G0=15/0 G1=6/0 G2=4/18 G3=7/7 G4=7/6[0m
+[0;32mI (589620) SHS01: GATE: G0=15/0 G1=8/0 G2=3/19 G3=5/7 G4=8/7[0m
+[0;32mI (590620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (590620) SHS01: GATE: G0=20/0 G1=6/0 G2=6/19 G3=3/7 G4=7/6[0m
+[0;32mI (591620) SHS01: GATE: G0=16/0 G1=7/0 G2=4/23 G3=5/8 G4=5/8[0m
+[0;32mI (592620) SHS01: GATE: G0=13/0 G1=18/0 G2=12/25 G3=5/9 G4=5/9[0m
+[0;32mI (593620) SHS01: GATE: G0=13/0 G1=12/0 G2=11/33 G3=7/10 G4=7/9[0m
+[0;32mI (594620) SHS01: GATE: G0=15/0 G1=5/0 G2=9/38 G3=5/12 G4=7/9[0m
+[0;32mI (595620) SHS01: GATE: G0=13/0 G1=8/0 G2=4/40 G3=8/13 G4=6/9[0m
+[0;32mI (596420) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=39[0m
+[0;32mI (596620) SHS01: GATE: G0=13/0 G1=5/0 G2=4/38 G3=7/13 G4=5/8[0m
+[0;32mI (597620) SHS01: GATE: G0=21/0 G1=8/0 G2=5/33 G3=10/12 G4=4/7[0m
+[0;32mI (598620) SHS01: GATE: G0=16/0 G1=6/0 G2=8/34 G3=5/11 G4=6/8[0m
+[0;32mI (599620) SHS01: GATE: G0=14/0 G1=11/0 G2=8/30 G3=10/9 G4=3/6[0m
+[0;32mI (600620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (600620) SHS01: GATE: G0=13/0 G1=11/0 G2=6/26 G3=5/11 G4=3/6[0m
+[0;32mI (601620) SHS01: GATE: G0=14/0 G1=7/0 G2=4/27 G3=6/12 G4=3/7[0m
+[0;32mI (602620) SHS01: GATE: G0=20/0 G1=11/0 G2=6/25 G3=9/14 G4=5/7[0m
+[0;32mI (603620) SHS01: GATE: G0=13/0 G1=10/0 G2=10/27 G3=9/14 G4=4/8[0m
+[0;32mI (604620) SHS01: GATE: G0=14/0 G1=8/0 G2=5/31 G3=5/13 G4=4/8[0m
+[0;32mI (605620) SHS01: GATE: G0=13/0 G1=6/0 G2=4/33 G3=5/14 G4=6/8[0m
+[0;32mI (606620) SHS01: GATE: G0=18/0 G1=4/0 G2=4/37 G3=5/12 G4=7/7[0m
+[0;32mI (607620) SHS01: GATE: G0=14/0 G1=9/0 G2=8/37 G3=5/13 G4=6/7[0m
+[0;32mI (608320) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=35[0m
+[0;32mI (608620) SHS01: GATE: G0=13/0 G1=5/0 G2=6/33 G3=6/11 G4=6/7[0m
+[0;32mI (609620) SHS01: GATE: G0=13/0 G1=8/0 G2=4/30 G3=5/9 G4=5/6[0m
+[0;32mI (610620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (610620) SHS01: GATE: G0=16/0 G1=7/0 G2=3/24 G3=3/8 G4=5/5[0m
+[0;32mI (611620) SHS01: GATE: G0=18/0 G1=10/0 G2=4/21 G3=5/7 G4=3/4[0m
+[0;32mI (612620) SHS01: GATE: G0=13/0 G1=5/0 G2=5/22 G3=10/8 G4=2/4[0m
+[0;32mI (613620) SHS01: GATE: G0=13/0 G1=4/0 G2=8/19 G3=7/8 G4=5/4[0m
+[0;32mI (614620) SHS01: GATE: G0=14/0 G1=7/0 G2=6/22 G3=6/7 G4=6/6[0m
+[0;32mI (615620) SHS01: GATE: G0=17/0 G1=6/0 G2=4/21 G3=4/7 G4=6/6[0m
+[0;32mI (616620) SHS01: GATE: G0=14/0 G1=7/0 G2=5/20 G3=6/6 G4=5/6[0m
+[0;32mI (617620) SHS01: GATE: G0=13/0 G1=5/0 G2=7/20 G3=5/7 G4=4/6[0m
+[0;32mI (618620) SHS01: GATE: G0=13/0 G1=4/0 G2=4/16 G3=5/8 G4=8/6[0m
+[0;32mI (619620) SHS01: GATE: G0=14/0 G1=5/0 G2=6/15 G3=4/8 G4=8/6[0m
+[0;32mI (620620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (620620) SHS01: GATE: G0=13/0 G1=7/0 G2=4/15 G3=4/7 G4=6/6[0m
+[0;32mI (621620) SHS01: GATE: G0=13/0 G1=6/0 G2=6/13 G3=6/7 G4=7/6[0m
+[0;32mI (622620) SHS01: GATE: G0=13/0 G1=6/0 G2=5/11 G3=5/7 G4=8/5[0m
+[0;32mI (623620) SHS01: GATE: G0=16/0 G1=4/0 G2=7/9 G3=4/6 G4=8/4[0m
+[0;32mI (624620) SHS01: GATE: G0=14/0 G1=5/0 G2=7/8 G3=7/7 G4=7/4[0m
+[0;32mI (625620) SHS01: GATE: G0=13/0 G1=5/0 G2=6/7 G3=6/7 G4=6/5[0m
+[0;32mI (626520) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=8[0m
+[0;32mI (626620) SHS01: GATE: G0=13/0 G1=5/0 G2=4/8 G3=5/6 G4=6/5[0m
+[0;32mI (627620) SHS01: GATE: G0=17/0 G1=11/0 G2=5/9 G3=7/6 G4=6/4[0m
+[0;32mI (628620) SHS01: GATE: G0=13/0 G1=7/0 G2=4/11 G3=7/7 G4=5/4[0m
+[0;32mI (629620) SHS01: GATE: G0=13/0 G1=7/0 G2=7/12 G3=3/7 G4=7/4[0m
+[0;32mI (630620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (630620) SHS01: GATE: G0=13/0 G1=6/0 G2=6/13 G3=6/9 G4=7/5[0m
+[0;32mI (631620) SHS01: GATE: G0=13/0 G1=5/0 G2=5/15 G3=6/10 G4=6/5[0m
+[0;32mI (632620) SHS01: GATE: G0=16/0 G1=5/0 G2=4/15 G3=3/9 G4=5/4[0m
+[0;32mI (633620) SHS01: GATE: G0=14/0 G1=7/0 G2=5/16 G3=4/9 G4=7/4[0m
+[0;32mI (634620) SHS01: GATE: G0=29/0 G1=23/0 G2=12/23 G3=6/9 G4=5/4[0m
+[0;32mI (635620) SHS01: GATE: G0=14/0 G1=6/0 G2=3/30 G3=7/9 G4=4/6[0m
+[0;32mI (636620) SHS01: GATE: G0=15/0 G1=6/0 G2=3/41 G3=5/11 G4=5/6[0m
+[0;32mI (637620) SHS01: GATE: G0=13/0 G1=16/0 G2=12/52 G3=4/11 G4=5/6[0m
+[0;32mI (638520) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=55[0m
+[0;32mI (638620) SHS01: GATE: G0=13/0 G1=6/0 G2=5/55 G3=5/11 G4=6/6[0m
+[0;32mI (639620) SHS01: GATE: G0=14/0 G1=7/0 G2=2/47 G3=4/10 G4=6/6[0m
+[0;32mI (640620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (640620) SHS01: GATE: G0=15/0 G1=7/0 G2=4/41 G3=5/9 G4=7/6[0m
+[0;32mI (641620) SHS01: GATE: G0=14/0 G1=7/0 G2=2/30 G3=6/9 G4=6/6[0m
+[0;32mI (642620) SHS01: GATE: G0=14/0 G1=7/0 G2=4/19 G3=7/8 G4=5/6[0m
+[0;32mI (643620) SHS01: GATE: G0=13/0 G1=4/0 G2=6/18 G3=6/8 G4=5/5[0m
+[0;32mI (644620) SHS01: GATE: G0=13/0 G1=4/0 G2=4/16 G3=7/7 G4=4/4[0m
+[0;32mI (645620) SHS01: GATE: G0=15/0 G1=20/0 G2=9/24 G3=6/7 G4=6/5[0m
+[0;32mI (646620) SHS01: GATE: G0=13/0 G1=7/0 G2=9/30 G3=3/10 G4=8/6[0m
+[0;32mI (647620) SHS01: GATE: G0=13/0 G1=5/0 G2=5/36 G3=7/12 G4=3/8[0m
+[0;32mI (647920) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=38[0m
+[0;32mI (648620) SHS01: GATE: G0=13/0 G1=6/0 G2=6/38 G3=6/13 G4=4/8[0m
+[0;32mI (649620) SHS01: GATE: G0=14/0 G1=9/0 G2=5/30 G3=7/14 G4=5/8[0m
+[0;32mI (650620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (650620) SHS01: GATE: G0=15/0 G1=5/0 G2=4/29 G3=6/13 G4=7/7[0m
+[0;32mI (651620) SHS01: GATE: G0=13/0 G1=8/0 G2=3/25 G3=8/10 G4=6/6[0m
+[0;32mI (652620) SHS01: GATE: G0=13/0 G1=7/0 G2=4/17 G3=5/9 G4=6/5[0m
+[0;32mI (653620) SHS01: GATE: G0=13/0 G1=7/0 G2=4/16 G3=5/8 G4=5/4[0m
+[0;32mI (654620) SHS01: GATE: G0=17/0 G1=5/0 G2=4/12 G3=4/5 G4=6/4[0m
+[0;32mI (655620) SHS01: GATE: G0=14/0 G1=5/0 G2=4/10 G3=3/5 G4=7/4[0m
+[0;32mI (656620) SHS01: GATE: G0=13/0 G1=5/0 G2=5/13 G3=3/5 G4=5/3[0m
+[0;32mI (657620) SHS01: GATE: G0=13/0 G1=5/0 G2=4/14 G3=5/6 G4=5/3[0m
+[0;32mI (658620) SHS01: GATE: G0=13/0 G1=7/0 G2=3/13 G3=6/7 G4=5/3[0m
+[0;32mI (659620) SHS01: GATE: G0=14/0 G1=6/0 G2=3/12 G3=5/6 G4=7/3[0m
+[0;32mI (660620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (660620) SHS01: GATE: G0=13/0 G1=7/0 G2=5/9 G3=6/6 G4=6/3[0m
+[0;32mI (661620) SHS01: GATE: G0=13/0 G1=5/0 G2=4/9 G3=6/4 G4=4/3[0m
+[0;32mI (662620) SHS01: GATE: G0=15/0 G1=10/0 G2=4/9 G3=5/3 G4=6/3[0m
+[0;32mI (662920) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=10[0m
+[0;32mI (663620) SHS01: GATE: G0=13/0 G1=6/0 G2=4/10 G3=6/4 G4=5/3[0m
+[0;32mI (664620) SHS01: GATE: G0=13/0 G1=6/0 G2=5/11 G3=5/4 G4=5/2[0m
+[0;32mI (665620) SHS01: GATE: G0=13/0 G1=6/0 G2=4/16 G3=5/6 G4=6/4[0m
+[0;32mI (666620) SHS01: GATE: G0=13/0 G1=8/0 G2=5/20 G3=7/7 G4=6/4[0m
+[0;32mI (667620) SHS01: GATE: G0=13/0 G1=8/0 G2=3/22 G3=7/8 G4=5/4[0m
+[0;32mI (668620) SHS01: GATE: G0=13/0 G1=4/0 G2=3/20 G3=6/7 G4=5/4[0m
+[0;32mI (669620) SHS01: GATE: G0=15/0 G1=7/0 G2=4/14 G3=8/7 G4=5/3[0m
+[0;32mI (670620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (670620) SHS01: GATE: G0=13/0 G1=4/0 G2=4/9 G3=7/7 G4=5/3[0m
+[0;32mI (671620) SHS01: GATE: G0=14/0 G1=8/0 G2=4/7 G3=7/7 G4=6/3[0m
+[0;32mI (672620) SHS01: GATE: G0=15/0 G1=11/0 G2=5/8 G3=7/7 G4=5/3[0m
+[0;32mI (673620) SHS01: GATE: G0=13/0 G1=7/0 G2=6/12 G3=8/7 G4=7/4[0m
+[0;32mI (674620) SHS01: GATE: G0=17/0 G1=9/0 G2=7/22 G3=3/8 G4=4/5[0m
+[0;32mI (675620) SHS01: GATE: G0=16/0 G1=13/0 G2=4/25 G3=4/10 G4=6/6[0m
+[0;32mI (676620) SHS01: GATE: G0=13/0 G1=6/0 G2=5/25 G3=3/11 G4=6/6[0m
+[0;32mI (677120) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=27[0m
+[0;32mI (677620) SHS01: GATE: G0=13/0 G1=10/0 G2=3/28 G3=9/12 G4=5/6[0m
+[0;32mI (678620) SHS01: GATE: G0=13/0 G1=6/0 G2=5/24 G3=5/12 G4=6/6[0m
+[0;32mI (679620) SHS01: GATE: G0=14/0 G1=11/0 G2=6/27 G3=4/12 G4=6/6[0m
+[0;32mI (680620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (680620) SHS01: GATE: G0=14/0 G1=8/0 G2=3/33 G3=5/13 G4=6/6[0m
+[0;32mI (681620) SHS01: GATE: G0=13/0 G1=4/0 G2=5/30 G3=5/11 G4=6/5[0m
+[0;32mI (682620) SHS01: GATE: G0=13/0 G1=11/0 G2=10/34 G3=8/10 G4=5/5[0m
+[0;32mI (683620) SHS01: GATE: G0=13/0 G1=9/0 G2=5/40 G3=6/12 G4=6/6[0m
+[0;32mI (684620) SHS01: GATE: G0=16/0 G1=7/0 G2=3/41 G3=4/11 G4=4/6[0m
+[0;32mI (685620) SHS01: GATE: G0=13/0 G1=7/0 G2=4/48 G3=7/13 G4=4/7[0m
+[0;32mI (686120) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=48[0m
+[0;32mI (686620) SHS01: GATE: G0=13/0 G1=8/0 G2=7/45 G3=5/13 G4=8/8[0m
+[0;32mI (687620) SHS01: GATE: G0=15/0 G1=5/0 G2=6/47 G3=1/15 G4=4/9[0m
+[0;32mI (688620) SHS01: GATE: G0=13/0 G1=5/0 G2=4/49 G3=4/15 G4=5/9[0m
+[0;32mI (689620) SHS01: GATE: G0=14/0 G1=9/0 G2=7/53 G3=3/15 G4=4/9[0m
+[0;32mI (690620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (690620) SHS01: GATE: G0=13/0 G1=11/0 G2=12/61 G3=4/16 G4=6/9[0m
+[0;32mI (691620) SHS01: GATE: G0=14/0 G1=18/0 G2=10/54 G3=3/13 G4=6/8[0m
+[0;32mI (692620) SHS01: GATE: G0=13/0 G1=3/0 G2=6/52 G3=6/14 G4=7/9[0m
+[0;32mI (693620) SHS01: GATE: G0=16/0 G1=9/0 G2=5/49 G3=6/15 G4=5/9[0m
+[0;32mI (693920) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=47[0m
+[0;32mI (694620) SHS01: GATE: G0=14/0 G1=7/0 G2=10/44 G3=7/13 G4=4/8[0m
+[0;32mI (695620) SHS01: GATE: G0=14/0 G1=9/0 G2=6/44 G3=9/13 G4=4/7[0m
+[0;32mI (696620) SHS01: GATE: G0=16/0 G1=8/0 G2=3/43 G3=5/12 G4=6/6[0m
+[0;32mI (697620) SHS01: GATE: G0=15/0 G1=6/0 G2=3/36 G3=9/12 G4=4/5[0m
+[0;32mI (698620) SHS01: GATE: G0=13/0 G1=4/0 G2=5/35 G3=3/13 G4=2/6[0m
+[0;32mI (699620) SHS01: GATE: G0=13/0 G1=10/0 G2=7/34 G3=6/12 G4=4/7[0m
+[0;32mI (700620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (700620) SHS01: GATE: G0=14/0 G1=15/0 G2=9/37 G3=7/13 G4=5/9[0m
+[0;32mI (701620) SHS01: GATE: G0=14/0 G1=11/0 G2=8/44 G3=2/14 G4=7/9[0m
+[0;32mI (702620) SHS01: GATE: G0=13/0 G1=5/0 G2=3/43 G3=5/12 G4=5/9[0m
+[0;32mI (703020) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=43[0m
+[0;32mI (703620) SHS01: GATE: G0=17/0 G1=9/0 G2=7/42 G3=7/13 G4=5/7[0m
+[0;32mI (704620) SHS01: GATE: G0=14/0 G1=5/0 G2=4/42 G3=4/14 G4=5/8[0m
+[0;32mI (705620) SHS01: GATE: G0=13/0 G1=5/0 G2=3/36 G3=8/13 G4=4/9[0m
+[0;32mI (706620) SHS01: GATE: G0=13/0 G1=11/0 G2=11/41 G3=3/12 G4=6/10[0m
+[0;32mI (707620) SHS01: GATE: G0=17/0 G1=14/0 G2=9/48 G3=5/11 G4=7/10[0m
+[0;32mI (708620) SHS01: GATE: G0=13/0 G1=4/0 G2=5/51 G3=3/11 G4=7/9[0m
+[0;32mI (709620) SHS01: GATE: G0=13/0 G1=5/0 G2=5/54 G3=4/11 G4=6/8[0m
+[0;32mI (710620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (710620) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=53[0m
+[0;32mI (710620) SHS01: GATE: G0=17/0 G1=6/0 G2=6/53 G3=3/12 G4=6/8[0m
+[0;32mI (711620) SHS01: GATE: G0=15/0 G1=5/0 G2=4/48 G3=6/13 G4=6/8[0m
+[0;32mI (712620) SHS01: GATE: G0=13/0 G1=3/0 G2=3/45 G3=5/12 G4=5/7[0m
+[0;32mI (713620) SHS01: GATE: G0=13/0 G1=6/0 G2=4/42 G3=8/11 G4=5/7[0m
+[0;32mI (714620) SHS01: GATE: G0=15/0 G1=7/0 G2=4/36 G3=7/9 G4=6/6[0m
+[0;32mI (715620) SHS01: GATE: G0=18/0 G1=6/0 G2=5/30 G3=5/9 G4=6/6[0m
+[0;32mI (716620) SHS01: GATE: G0=14/0 G1=9/0 G2=5/23 G3=4/7 G4=6/5[0m
+[0;32mI (717620) SHS01: GATE: G0=13/0 G1=6/0 G2=5/17 G3=6/7 G4=6/5[0m
+[0;32mI (718620) SHS01: GATE: G0=13/0 G1=5/0 G2=6/15 G3=7/7 G4=6/4[0m
+[0;32mI (718720) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=14[0m
+[0;32mI (719620) SHS01: GATE: G0=14/0 G1=5/0 G2=6/13 G3=6/6 G4=5/3[0m
+[0;32mI (720620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (720620) SHS01: GATE: G0=15/0 G1=6/0 G2=6/12 G3=6/5 G4=5/3[0m
+[0;32mI (721620) SHS01: GATE: G0=14/0 G1=8/0 G2=7/24 G3=4/9 G4=7/4[0m
+[0;32mI (722620) SHS01: GATE: G0=16/0 G1=7/0 G2=3/30 G3=8/12 G4=4/5[0m
+[0;32mI (723620) SHS01: GATE: G0=21/0 G1=12/0 G2=3/38 G3=7/12 G4=3/6[0m
+[0;32mI (724620) SHS01: GATE: G0=13/0 G1=5/0 G2=4/41 G3=3/14 G4=7/8[0m
+[0;32mI (725620) SHS01: GATE: G0=13/0 G1=6/0 G2=7/28 G3=4/10 G4=7/7[0m
+[0;32mI (726620) SHS01: GATE: G0=14/0 G1=9/0 G2=5/22 G3=4/7 G4=7/7[0m
+[0;32mI (727620) SHS01: GATE: G0=14/0 G1=5/0 G2=5/14 G3=3/7 G4=7/6[0m
+[0;32mI (728620) SHS01: GATE: G0=13/0 G1=9/0 G2=7/11 G3=6/6 G4=7/5[0m
+[0;32mI (729620) SHS01: GATE: G0=13/0 G1=8/0 G2=4/12 G3=3/5 G4=8/5[0m
+[0;32mI (730620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (730620) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=13[0m
+[0;32mI (730620) SHS01: GATE: G0=13/0 G1=7/0 G2=3/13 G3=6/6 G4=6/6[0m
+[0;32mI (731620) SHS01: GATE: G0=14/0 G1=19/0 G2=13/17 G3=7/7 G4=4/6[0m
+[0;32mI (732620) SHS01: GATE: G0=15/0 G1=16/0 G2=9/25 G3=10/9 G4=4/7[0m
+[0;32mI (733620) SHS01: GATE: G0=14/0 G1=7/0 G2=9/30 G3=8/12 G4=2/8[0m
+[0;32mI (734620) SHS01: GATE: G0=13/0 G1=7/0 G2=10/35 G3=10/14 G4=3/8[0m
+[0;32mI (735620) SHS01: GATE: G0=13/0 G1=9/0 G2=3/36 G3=8/16 G4=2/8[0m
+[0;32mI (736620) SHS01: GATE: G0=13/0 G1=5/0 G2=6/32 G3=7/15 G4=4/8[0m
+[0;32mI (737620) SHS01: GATE: G0=15/0 G1=6/0 G2=3/27 G3=8/12 G4=3/6[0m
+[0;32mI (738620) SHS01: GATE: G0=15/0 G1=9/0 G2=5/27 G3=7/11 G4=2/7[0m
+[0;32mI (739620) SHS01: GATE: G0=13/0 G1=7/0 G2=5/25 G3=6/9 G4=5/7[0m
+[0;32mI (740620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (740620) SHS01: GATE: G0=13/0 G1=11/0 G2=8/26 G3=6/7 G4=5/7[0m
+[0;32mI (741620) SHS01: GATE: G0=14/0 G1=6/0 G2=6/27 G3=7/9 G4=4/9[0m
+[0;32mI (742020) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=28[0m
+[0;32mI (742620) SHS01: GATE: G0=13/0 G1=7/0 G2=6/30 G3=8/9 G4=5/9[0m
+[0;32mI (743620) SHS01: GATE: G0=13/0 G1=5/0 G2=5/31 G3=1/12 G4=8/11[0m
+[0;32mI (744620) SHS01: GATE: G0=13/0 G1=7/0 G2=5/31 G3=5/13 G4=5/11[0m
+[0;32mI (745620) SHS01: GATE: G0=15/0 G1=11/0 G2=4/33 G3=8/13 G4=4/10[0m
+[0;32mI (746620) SHS01: GATE: G0=13/0 G1=3/0 G2=3/26 G3=5/13 G4=5/9[0m
+[0;32mI (747620) SHS01: GATE: G0=13/0 G1=10/0 G2=8/26 G3=7/11 G4=6/7[0m
+[0;32mI (748620) SHS01: GATE: G0=13/0 G1=7/0 G2=7/23 G3=5/10 G4=5/7[0m
+[0;32mI (749620) SHS01: GATE: G0=13/0 G1=9/0 G2=4/25 G3=5/9 G4=5/6[0m
+[0;32mI (750620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (750620) SHS01: GATE: G0=14/0 G1=9/0 G2=9/35 G3=8/10 G4=5/7[0m
+[0;32mI (751620) SHS01: GATE: G0=13/0 G1=7/0 G2=6/39 G3=6/14 G4=5/7[0m
+[0;32mI (751720) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=40[0m
+[0;32mI (752620) SHS01: GATE: G0=19/0 G1=19/0 G2=6/49 G3=8/17 G4=4/7[0m
+[0;32mI (753620) SHS01: GATE: G0=13/0 G1=5/0 G2=3/53 G3=7/18 G4=5/7[0m
+[0;32mI (754620) SHS01: GATE: G0=15/0 G1=8/0 G2=5/42 G3=6/15 G4=4/6[0m
+[0;32mI (755620) SHS01: GATE: G0=13/0 G1=6/0 G2=5/34 G3=8/12 G4=4/6[0m
+[0;32mI (756620) SHS01: GATE: G0=14/0 G1=7/0 G2=4/28 G3=5/10 G4=6/6[0m
+[0;32mI (757620) SHS01: GATE: G0=17/0 G1=18/0 G2=5/29 G3=5/11 G4=6/6[0m
+[0;32mI (758620) SHS01: GATE: G0=16/0 G1=9/0 G2=10/34 G3=3/11 G4=6/7[0m
+[0;32mI (759620) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=40[0m
+[0;32mI (759620) SHS01: GATE: G0=15/0 G1=14/0 G2=9/40 G3=6/12 G4=6/8[0m
+[0;32mI (760620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (760620) SHS01: GATE: G0=13/0 G1=6/0 G2=3/41 G3=6/12 G4=5/9[0m
+[0;32mI (761620) SHS01: GATE: G0=17/0 G1=7/0 G2=6/40 G3=3/12 G4=7/9[0m
+[0;32mI (762620) SHS01: GATE: G0=13/0 G1=10/0 G2=11/41 G3=5/12 G4=7/9[0m
+[0;32mI (763620) SHS01: GATE: G0=13/0 G1=7/0 G2=9/40 G3=3/12 G4=5/9[0m
+[0;32mI (764620) SHS01: GATE: G0=13/0 G1=17/0 G2=6/46 G3=4/11 G4=4/7[0m
+[0;32mI (765620) SHS01: GATE: G0=16/0 G1=17/0 G2=11/44 G3=3/10 G4=5/6[0m
+[0;32mI (766620) SHS01: GATE: G0=17/0 G1=17/0 G2=3/47 G3=5/10 G4=4/6[0m
+[0;32mI (767620) SHS01: GATE: G0=14/0 G1=6/0 G2=4/47 G3=7/10 G4=5/6[0m
+[0;32mI (768620) SHS01: GATE: G0=13/0 G1=4/0 G2=3/47 G3=9/11 G4=3/6[0m
+[0;32mI (769220) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=48[0m
+[0;32mI (769620) SHS01: GATE: G0=13/0 G1=7/0 G2=5/45 G3=7/12 G4=8/7[0m
+[0;32mI (770620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (770620) SHS01: GATE: G0=16/0 G1=21/0 G2=9/46 G3=3/13 G4=6/8[0m
+[0;32mI (771620) SHS01: GATE: G0=13/0 G1=5/0 G2=4/45 G3=1/12 G4=7/7[0m
+[0;32mI (772620) SHS01: GATE: G0=13/0 G1=11/0 G2=5/44 G3=3/13 G4=7/7[0m
+[0;32mI (773620) SHS01: GATE: G0=15/0 G1=15/0 G2=7/48 G3=4/12 G4=5/7[0m
+[0;32mI (774620) SHS01: GATE: G0=16/0 G1=8/0 G2=3/48 G3=3/11 G4=7/7[0m
+[0;32mI (775620) SHS01: GATE: G0=13/0 G1=7/0 G2=3/47 G3=2/11 G4=7/8[0m
+[0;32mI (776620) SHS01: GATE: G0=13/0 G1=17/0 G2=12/41 G3=8/10 G4=2/8[0m
+[0;32mI (777620) SHS01: GATE: G0=13/0 G1=5/0 G2=6/37 G3=7/10 G4=4/9[0m
+[0;32mI (778620) SHS01: GATE: G0=14/0 G1=13/0 G2=8/34 G3=7/11 G4=4/10[0m
+[0;32mI (778720) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=35[0m
+[0;32mI (779620) SHS01: GATE: G0=16/0 G1=17/0 G2=9/39 G3=6/12 G4=7/10[0m
+[0;32mI (780620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (780620) SHS01: GATE: G0=20/0 G1=8/0 G2=4/42 G3=4/14 G4=7/10[0m
+[0;32mI (781620) SHS01: GATE: G0=13/0 G1=7/0 G2=7/46 G3=4/13 G4=6/11[0m
+[0;32mI (782620) SHS01: GATE: G0=14/0 G1=6/0 G2=6/55 G3=7/14 G4=6/11[0m
+[0;32mI (783620) SHS01: GATE: G0=13/0 G1=10/0 G2=8/56 G3=5/15 G4=5/10[0m
+[0;32mI (784620) SHS01: GATE: G0=13/0 G1=10/0 G2=6/60 G3=5/13 G4=6/10[0m
+[0;32mI (785620) SHS01: GATE: G0=13/0 G1=16/0 G2=11/62 G3=2/14 G4=7/9[0m
+[0;32mI (786420) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=56[0m
+[0;32mI (786620) SHS01: GATE: G0=18/0 G1=10/0 G2=4/54 G3=7/15 G4=5/8[0m
+[0;32mI (787620) SHS01: GATE: G0=13/0 G1=11/0 G2=12/55 G3=10/13 G4=5/8[0m
+[0;32mI (788620) SHS01: GATE: G0=13/0 G1=21/0 G2=10/58 G3=7/15 G4=5/9[0m
+[0;32mI (789620) SHS01: GATE: G0=14/0 G1=7/0 G2=9/58 G3=5/16 G4=5/8[0m
+[0;32mI (790620) LD2410: Frame type: 0x01, len: 35, eng_mode_enabled: 1[0m
+[0;32mI (790620) SHS01: GATE: G0=13/0 G1=11/0 G2=9/57 G3=5/13 G4=5/8[0m
+[0;32mI (791620) SHS01: GATE: G0=13/0 G1=7/0 G2=7/57 G3=4/12 G4=7/7[0m
+[0;32mI (792620) SHS01: GATE: G0=13/0 G1=12/0 G2=10/55 G3=3/13 G4=10/8[0m
+[0;32mI (793620) SHS01: GATE: G0=14/0 G1=5/0 G2=8/58 G3=4/15 G4=7/10[0m
+[0;32mI (794620) SHS01: RAW: state=0x00 mv=0 st=0 mv_d=30 mv_e=0 st_d=30 st_e=61[0m
+[0;32mI (794620) SHS01: GATE: G0=13/0 G1=9/0 G2=7/61 G3=9/19 G4=3/12[0m
+[0;32mI (795620) SHS01: GATE: G0=13/0 G1=6/0 G2=4/58 G3=3/22 G4=7/12[0m
+[0;32mI (796620) SHS01: GATE: G0=13/0 G1=7/0 G2=6/50 G3=1/22 G4=7/11[0m
+[0;32mI (797420) LD2410: Set gate 0 sensitivity: move=50, still=50[0m
+[0;32mI (797440) SHS01: Set Gate 0 move sensitivity = 50[0m
+[0;32mI (797720) SHS01: GATE: G0=19/0 G1=12/0 G2=8/37 G3=4/17 G4=7/9[0m
+[0;32mI (798720) S

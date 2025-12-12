@@ -1,0 +1,221 @@
+Command: /Users/thibaultbougard/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/thibaultbougard/esp/v5.5.1/esp-idf/tools/idf_monitor.py -p /dev/tty.usbmodem5A7A0486211 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/SHS01_Enhanced.elf /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/bootloader/bootloader.elf -m '/Users/thibaultbougard/.espressif/python_env/idf5.5_py3.9_env/bin/python' '/Users/thibaultbougard/esp/v5.5.1/esp-idf/tools/idf.py' '-p' '/dev/tty.usbmodem5A7A0486211'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec 12 2025 18:18:47[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (44) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 000e1000[0m
+[0;32mI (72) boot:  3 zb_storage       Unknown data     01 81 000f1000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 000f5000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42078020 size=1121ch ( 70172) map[0m
+[0;32mI (109) esp_image: segment 1: paddr=00021244 vaddr=40800000 size=06dd4h ( 28116) load[0m
+[0;32mI (116) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=77c40h (490560) map[0m
+[0;32mI (208) esp_image: segment 3: paddr=0009fc68 vaddr=40806dd4 size=0d45ch ( 54364) load[0m
+[0;32mI (224) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (225) boot: Disabling RNG early entropy source...[0m
+[0;32mI (235) cpu_start: Unicore app[0m
+[0;32mI (243) cpu_start: Pro cpu start user code[0m
+[0;32mI (243) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (244) app_init: Application information:[0m
+[0;32mI (244) app_init: Project name:     SHS01_Enhanced[0m
+[0;32mI (248) app_init: App version:      1[0m
+[0;32mI (251) app_init: Compile time:     Dec 12 2025 18:18:21[0m
+[0;32mI (256) app_init: ELF file SHA256:  2fc578656...[0m
+[0;32mI (261) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (265) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (269) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (273) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (277) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (283) heap_init: At 408193C0 len 00063250 (396 KiB): RAM[0m
+[0;32mI (288) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (293) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (299) spi_flash: detected chip: gd[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;33mW (305) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (317) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (323) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (330) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (349) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (349) main_task: Started on CPU0[0m
+[0;32mI (349) main_task: Calling app_main()[0m
+[0;32mI (349) SHS01: NVS loaded: mv_cd=15s, occ_cd=15s, mv_sens=50, st_sens=50, mv_gate=5, st_gate=6, eng=1[0m
+[0;32mI (359) LD2410: LD2410 driver initialized[0m
+[0;32mI (459) SHS01: Static Target -> DETECTED (dist=30cm, energy=53)[0m
+[0;32mI (459) SHS01: Occupancy -> DETECTED[0m
+[0;32mI (459) SHS01: First data: move=30cm/0, static=30cm/53, detect=0cm[0m
+[0;32mI (499) LD2410: Set max gates: moving=5, static=6, timeout=15s[0m
+[0;32mI (559) LD2410: Set all gates sensitivity: move=50, still=50[0m
+[0;32mI (579) LD2410: Moving cooldown set to 15 seconds[0m
+[0;32mI (579) LD2410: Occupancy clear delay set to 15 seconds[0m
+[0;32mI (619) LD2410: Engineering mode enabled[0m
+[0;32mI (679) LD2410: Firmware: V2.68.25070917[0m
+[0;32mI (739) LD2410: Config read: max_move=5, max_static=6, timeout=15[0m
+[0;32mI (759) SHS01: LD2410 processing task started[0m
+[0;32mI (759) SHS01: BOOT long-press enabled on GPIO9 (hold 6000 ms to factory reset)[0m
+[0;32mI (759) phy_init: phy_version 341,a6c8fe6,Jul 30 2025,18:34:11[0m
+[0;32mI (839) phy: libbtbb version: a945109, Jul 30 2025, 18:34:25[0m
+[0;32mI (859) SHS01: Enhanced SHS01 firmware started[0m
+[0;32mI (859) main_task: Returned from app_main()[0m
+[0;32mI (869) SHS01: ZDO signal: ZDO Config Ready (0x17), status: ESP_FAIL[0m
+[0;32mI (869) SHS01: Initialize Zigbee stack[0m
+[0;32mI (869) SHS01: ZDO signal: NWK Permit Join (0x36), status: ESP_OK[0m
+[0;32mI (869) SHS01: Device started up in non factory-reset mode[0m
+[0;32mI (879) SHS01: Device rebooted[0m
+[0;32mI (1819) SHS01: Moving Target -> DETECTED (dist=30cm, energy=51)[0m
+[0;32mI (1819) SHS01: Static Target -> CLEAR (dist=30cm, energy=41)[0m
+[0;32mI (1919) SHS01: Static Target -> DETECTED (dist=30cm, energy=41)[0m
+[0;32mI (7419) SHS01: Static Target -> CLEAR (dist=30cm, energy=34)[0m
+[0;32mI (7519) SHS01: Static Target -> DETECTED (dist=30cm, energy=36)[0m
+[0;32mI (8219) SHS01: RAW: state=2 mv_d=30 mv_e=0 st_d=30 st_e=39 det_d=0[0m
+[0;32mI (8439) LD2410: Moving cooldown set to 15 seconds[0m
+[0;32mI (8439) SHS01: Set Movement Cooldown = 15s[0m
+[0;32mI (8819) SHS01: Static Target -> CLEAR (dist=30cm, energy=37)[0m
+[0;32mI (8919) SHS01: Static Target -> DETECTED (dist=30cm, energy=38)[0m
+[0;32mI (9019) SHS01: Static Target -> CLEAR (dist=30cm, energy=38)[0m
+[0;32mI (9119) SHS01: Static Target -> DETECTED (dist=30cm, energy=38)[0m
+[0;32mI (10219) SHS01: Static Target -> CLEAR (dist=30cm, energy=40)[0m
+[0;32mI (10419) SHS01: Static Target -> DETECTED (dist=62cm, energy=100)[0m
+[0;32mI (11939) SHS01: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (27919) SHS01: RAW: state=2 mv_d=152 mv_e=0 st_d=152 st_e=100 det_d=160[0m
+[0;32mI (55989) SHS01: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (56519) SHS01: RAW: state=3 mv_d=73 mv_e=64 st_d=70 st_e=100 det_d=55[0m
+[0;32mI (71519) SHS01: RAW: state=2 mv_d=30 mv_e=0 st_d=30 st_e=63 det_d=0[0m
+[0;32mI (74319) SHS01: Static Target -> CLEAR (dist=30cm, energy=35)[0m
+[0;32mI (74719) SHS01: Static Target -> DETECTED (dist=30cm, energy=40)[0m
+[0;32mI (77319) SHS01: RAW: state=2 mv_d=30 mv_e=0 st_d=30 st_e=71 det_d=0[0m
+[0;32mI (84219) SHS01: RAW: state=2 mv_d=30 mv_e=0 st_d=30 st_e=20 det_d=0[0m
+[0;32mI (86719) SHS01: Static Target -> CLEAR (dist=30cm, energy=27)[0m
+[0;32mI (86819) SHS01: Static Target -> DETECTED (dist=30cm, energy=27)[0m
+[0;32mI (98319) SHS01: RAW: state=2 mv_d=30 mv_e=0 st_d=30 st_e=30 det_d=0[0m
+[0;32mI (98739) LD2410: Set all gates sensitivity: move=50, still=50[0m
+[0;32mI (98759) SHS01: Set Static Sensitivity = 50/100[0m
+[0;32mI (100119) LD2410: Set all gates sensitivity: move=50, still=50[0m
+[0;32mI (100139) SHS01: Set Moving Sensitivity = 50/100[0m
+[0;32mI (101719) SHS01: Moving Target -> CLEAR (dist=30cm, energy=0)[0m
+[0;32mI (101919) SHS01: Static Target -> CLEAR (dist=30cm, energy=26)[0m
+[0;32mI (101919) SHS01: Occupancy -> CLEAR[0m
+[0;32mI (102219) SHS01: Moving Target -> DETECTED (dist=30cm, energy=100)[0m
+[0;32mI (102219) SHS01: Occupancy -> DETECTED[0m
+[0;32mI (102419) SHS01: Static Target -> DETECTED (dist=30cm, energy=31)[0m
+[0;32mI (104439) SHS01: ZDO signal: NLME Status Indication (0x32), status: ESP_OK[0m
+[0;32mI (109819) SHS01: RAW: state=2 mv_d=30 mv_e=0 st_d=30 st_e=22 det_d=0[0m
+[0;32mI (110359) LD2410: Moving cooldown set to 15 seconds[0m
+[0;32mI (110359) SHS01: Set Movement Cooldown = 15s[0m
+[0;32mI (112999) LD2410: Set max gates: moving=5, static=6, timeout=15s[0m
+[0;32mI (113019) SHS01: Set Occupancy Cooldown = 15s[0m
+[0;32mI (114519) SHS01: Static Target -> CLEAR (dist=30cm, energy=66)[0m
+[0;32mI (114619) SHS01: Static Target -> DETECTED (dist=60cm, energy=77)[0m
+[0;32mI (138119) SHS01: RAW: state=2 mv_d=30 mv_e=0 st_d=30 st_e=64 det_d=0[0m
+[0;32mI (149319) SHS01: RAW: state=2 mv_d=30 mv_e=0 st_d=30 st_e=48 det_d=0[0m
+[0;32mI (150119) SHS01: Moving Target -> CLEAR (dist=30cm, energy=0)[0m
+[0;32mI (158719) SHS01: RAW: state=2 mv_d=30 mv_e=0 st_d=30 st_e=54 det_d=0[0m
+[0;32mI (167219) SHS01: RAW: state=2 mv_d=30 mv_e=0 st_d=30 st_e=40 det_d=0[0m
+[0;32mI (170719) SHS01: Moving Target -> DETECTED (dist=84cm, energy=65)[0m
+[0;32mI (189119) SHS01: RAW: state=3 mv_d=73 mv_e=97 st_d=73 st_e=100 det_d=55[0m
+[0;32mI (201219) SHS01: RAW: state=2 mv_d=72 mv_e=0 st_d=72 st_e=99 det_d=55[0m
+[0;32mI (211119) SHS01: RAW: state=2 mv_d=75 mv_e=0 st_d=75 st_e=82 det_d=62[0m
+[0;32mI (239619) SHS01: RAW: state=3 mv_d=30 mv_e=100 st_d=30 st_e=100 det_d=56[0m
+[0;32mI (247619) SHS01: RAW: state=2 mv_d=30 mv_e=0 st_d=30 st_e=88 det_d=0[0m
+[0;32mI (254719) SHS01: Moving Target -> CLEAR (dist=30cm, energy=0)[0m
+[0;32mI (257819) SHS01: RAW: state=2 mv_d=30 mv_e=0 st_d=30 st_e=84 det_d=0[0m
+[0;32mI (273819) SHS01: RAW: state=2 mv_d=30 mv_e=0 st_d=30 st_e=71 det_d=0[0m
+[0;32mI (276919) SHS01: Moving Target -> DETECTED (dist=30cm, energy=100)[0m
+[0;32mI (282519) SHS01: RAW: state=2 mv_d=30 mv_e=0 st_d=30 st_e=48 det_d=0[0m
+[0;32mI (283119) SHS01: Static Target -> CLEAR (dist=30cm, energy=47)[0m
+[0;32mI (283219) SHS01: Static Target -> DETECTED (dist=30cm, energy=46)[0m
+[0;32mI (283619) SHS01: Static Target -> CLEAR (dist=30cm, energy=45)[0m
+[0;32mI (283719) SHS01: Static Target -> DETECTED (dist=30cm, energy=44)[0m
+[0;32mI (284979) LD2410: Engineering mode enabled[0m
+[0;32mI (284999) SHS01: Engineering mode = ON[0m
+[0;32mI (292519) SHS01: RAW: state=2 mv_d=30 mv_e=0 st_d=30 st_e=20 det_d=0[0m
+[0;32mI (293619) SHS01: Static Target -> CLEAR (dist=30cm, energy=24)[0m
+[0;32mI (293819) SHS01: Static Target -> DETECTED (dist=30cm, energy=27)[0m
+[0;32mI (294119) SHS01: Static Target -> CLEAR (dist=30cm, energy=32)[0m
+[0;32mI (294219) SHS01: Static Target -> DETECTED (dist=30cm, energy=33)[0m
+[0;32mI (296219) SHS01: Static Target -> CLEAR (dist=30cm, energy=48)[0m
+[0;32mI (296319) SHS01: Static Target -> DETECTED (dist=30cm, energy=49)[0m
+[0;32mI (296519) SHS01: Static Target -> CLEAR (dist=30cm, energy=51)[0m
+[0;32mI (296619) SHS01: Static Target -> DETECTED (dist=30cm, energy=51)[0m
+[0;32mI (298019) SHS01: Static Target -> CLEAR (dist=30cm, energy=42)[0m
+[0;32mI (298219) SHS01: Static Target -> DETECTED (dist=30cm, energy=41)[0m
+[0;32mI (300219) SHS01: RAW: state=2 mv_d=30 mv_e=0 st_d=30 st_e=39 det_d=0[0m
+[0;32mI (300919) SHS01: Static Target -> CLEAR (dist=30cm, energy=40)[0m
+[0;32mI (301019) SHS01: Static Target -> DETECTED (dist=30cm, energy=40)[0m
+[0;32mI (301119) SHS01: Static Target -> CLEAR (dist=30cm, energy=72)[0m
+[0;32mI (301219) SHS01: Static Target -> DETECTED (dist=30cm, energy=81)[0m
+[0;32mI (320019) SHS01: RAW: state=2 mv_d=69 mv_e=0 st_d=69 st_e=35 det_d=54[0m
+[0;32mI (322219) SHS01: Static Target -> CLEAR (dist=69cm, energy=29)[0m
+[0;32mI (322319) SHS01: Static Target -> DETECTED (dist=71cm, energy=29)[0m
+[0;32mI (330219) SHS01: RAW: state=2 mv_d=71 mv_e=0 st_d=71 st_e=29 det_d=54[0m
+[0;32mI (337219) SHS01: Moving Target -> CLEAR (dist=71cm, energy=0)[0m
+[0;32mI (337419) SHS01: Static Target -> CLEAR (dist=71cm, energy=36)[0m
+[0;32mI (337419) SHS01: Occupancy -> CLEAR[0m
+[0;32mI (339119) SHS01: Moving Target -> DETECTED (dist=72cm, energy=63)[0m
+[0;32mI (339119) SHS01: Occupancy -> DETECTED[0m
+[0;32mI (339219) SHS01: Static Target -> DETECTED (dist=72cm, energy=48)[0m
+[0;32mI (340519) SHS01: RAW: state=2 mv_d=72 mv_e=0 st_d=72 st_e=55 det_d=55[0m
+[0;32mI (348719) SHS01: RAW: state=2 mv_d=72 mv_e=0 st_d=72 st_e=57 det_d=55[0m
+[0;32mI (349619) SHS01: Static Target -> CLEAR (dist=72cm, energy=48)[0m
+[0;32mI (349719) SHS01: Static Target -> DETECTED (dist=72cm, energy=48)[0m
+[0;32mI (356019) SHS01: Static Target -> CLEAR (dist=73cm, energy=50)[0m
+[0;32mI (356219) SHS01: Static Target -> DETECTED (dist=70cm, energy=50)[0m
+[0;32mI (357519) SHS01: RAW: state=2 mv_d=70 mv_e=0 st_d=70 st_e=54 det_d=54[0m
+[0;32mI (360319) SHS01: Static Target -> CLEAR (dist=70cm, energy=49)[0m
+[0;32mI (360419) SHS01: Static Target -> DETECTED (dist=72cm, energy=49)[0m
+[0;32mI (360819) SHS01: Static Target -> CLEAR (dist=72cm, energy=51)[0m
+[0;32mI (360919) SHS01: Static Target -> DETECTED (dist=72cm, energy=51)[0m
+[0;32mI (361019) SHS01: Static Target -> CLEAR (dist=72cm, energy=50)[0m
+[0;32mI (361119) SHS01: Static Target -> DETECTED (dist=70cm, energy=50)[0m
+[0;32mI (364419) SHS01: Static Target -> CLEAR (dist=70cm, energy=40)[0m
+[0;32mI (364519) SHS01: Static Target -> DETECTED (dist=69cm, energy=40)[0m
+[0;32mI (365119) SHS01: Static Target -> CLEAR (dist=69cm, energy=38)[0m
+[0;32mI (365219) SHS01: Static Target -> DETECTED (dist=70cm, energy=38)[0m
+[0;32mI (365819) SHS01: RAW: state=2 mv_d=70 mv_e=0 st_d=70 st_e=36 det_d=54[0m
+[0;32mI (368319) SHS01: Static Target -> CLEAR (dist=70cm, energy=50)[0m
+[0;32mI (368419) SHS01: Static Target -> DETECTED (dist=69cm, energy=50)[0m
+[0;32mI (371219) SHS01: Static Target -> CLEAR (dist=69cm, energy=45)[0m
+[0;32mI (371319) SHS01: Static Target -> DETECTED (dist=67cm, energy=44)[0m
+[0;32mI (371719) SHS01: Static Target -> CLEAR (dist=67cm, energy=42)[0m
+[0;32mI (371819) SHS01: Static Target -> DETECTED (dist=71cm, energy=42)[0m
+[0;32mI (373719) SHS01: Static Target -> CLEAR (dist=71cm, energy=42)[0m
+[0;32mI (373819) SHS01: Static Target -> DETECTED (dist=70cm, energy=43)[0m
+[0;32mI (374119) SHS01: RAW: state=2 mv_d=70 mv_e=0 st_d=70 st_e=46 det_d=54[0m
+[0;32mI (374519) SHS01: Static Target -> CLEAR (dist=70cm, energy=50)[0m
+[0;32mI (374619) SHS01: Static Target -> DETECTED (dist=73cm, energy=49)[0m
+[0;32mI (375119) SHS01: Static Target -> CLEAR (dist=73cm, energy=49)[0m
+[0;32mI (375319) SHS01: Static Target -> DETECTED (dist=69cm, energy=47)[0m
+[0;32mI (377719) SHS01: Static Target -> CLEAR (dist=69cm, energy=49)[0m
+[0;32mI (377819) SHS01: Static Target -> DETECTED (dist=70cm, energy=48)[0m
+[0;32mI (378019) SHS01: Static Target -> CLEAR (dist=70cm, energy=47)[0m
+[0;32mI (378119) SHS01: Static Target -> DETECTED (dist=72cm, energy=46)[0m
+[0;32mI (379519) SHS01: Static Target -> CLEAR (dist=72cm, energy=46)[0m
+[0;32mI (379619) SHS01: Static Target -> DETECTED (dist=71cm, energy=47)[0m
+[0;32mI (380819) SHS01: RAW: state=1 mv_d=69 mv_e=57 st_d=71 st_e=46 det_d=54[0m
+[0;32mI (380819) SHS01: Static Target -> CLEAR (dist=71cm, energy=46)[0m
+[0;32mI (380919) SHS01: Static Target -> DETECTED (dist=69cm, energy=46)[0m
+[0;32mI (384119) SHS01: Static Target -> CLEAR (dist=69cm, energy=47)[0m
+[0;32mI (384219) SHS01: Static Target -> DETECTED (dist=72cm, energy=47)[0m
+[0;32mI (387719) SHS01: Static Target -> CLEAR (dist=72cm, energy=41)[0m
+[0;32mI (387819) SHS01: Static Target -> DETECTED (dist=72cm, energy=40)[0m
+[0;32mI (389219) SHS01: Static Target -> CLEAR (dist=72cm, energy=37)[0m
+[0;32mI (389319) SHS01: Static Target -> DETECTED (dist=69cm, energy=39)[0m
+[0;32mI (389419) SHS01: RAW: state=2 mv_d=69 mv_e=0 st_d=69 st_e=40 det_d=55[0m
+[0;32mI (389919) SHS01: Static Target -> CLEAR (dist=69cm, energy=39)[0m
+[0;32mI (39001

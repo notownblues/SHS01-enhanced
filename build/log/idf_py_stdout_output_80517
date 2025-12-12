@@ -1,0 +1,31 @@
+Command: ninja all
+[1/11] Performing build step for 'bootloader'
+[1/1] cd /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/bootloader/esp-idf/esptool_py && /Users/thibaultbougard/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/thibaultbougard/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/bootloader/bootloader.bin
+Bootloader binary size 0x57e0 bytes. 0x2820 bytes (31%) free.
+[2/11] No install step for 'bootloader'
+[3/11] Completed 'bootloader'
+[4/11] Building C object esp-idf/ld2410_enhanced/CMakeFiles/__idf_ld2410_enhanced.dir/src/ld2410_enhanced.c.obj
+/Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/components/ld2410_enhanced/src/ld2410_enhanced.c: In function 'parse_basic_frame':
+/Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/components/ld2410_enhanced/src/ld2410_enhanced.c:73:13: warning: unused variable 'prev_state' [-Wunused-variable]
+   73 |     uint8_t prev_state = s_state.target.target_state;
+      |             ^~~~~~~~~~
+/Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/components/ld2410_enhanced/src/ld2410_enhanced.c: In function 'parse_engineering_frame':
+/Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/components/ld2410_enhanced/src/ld2410_enhanced.c:188:13: warning: unused variable 'prev_state' [-Wunused-variable]
+  188 |     uint8_t prev_state = s_state.target.target_state;
+      |             ^~~~~~~~~~
+[5/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/shs01.c.obj
+/Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/main/shs01.c:227:13: warning: 'shs_zb_set_u16_attr' defined but not used [-Wunused-function]
+  227 | static void shs_zb_set_u16_attr(uint8_t endpoint, uint16_t cluster, uint16_t attr_id, uint16_t value) {
+      |             ^~~~~~~~~~~~~~~~~~~
+[6/11] Linking C static library esp-idf/ld2410_enhanced/libld2410_enhanced.a
+[7/11] Linking C static library esp-idf/main/libmain.a
+[8/11] Generating esp-idf/esp_system/ld/sections.ld
+[9/11] Linking CXX executable SHS01_Enhanced.elf
+[10/11] Generating binary image from built executable
+esptool.py v4.11.dev1
+Creating esp32c6 image...
+Merged 2 ELF sections
+Successfully created esp32c6 image.
+Generated /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/SHS01_Enhanced.bin
+[11/11] cd /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/esp-idf/esptool_py && /Users/thibaultbougard/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/thibaultbougard/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/partition_table/partition-table.bin /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/SHS01_Enhanced.bin
+SHS01_Enhanced.bin binary size 0x9cfe0 bytes. Smallest app partition is 0xe1000 bytes. 0x44020 bytes (30%) free.

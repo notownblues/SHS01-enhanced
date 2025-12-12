@@ -1,0 +1,2 @@
+source /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/bootloader/gdbinit/symbols
+source /Users/thibaultbougard/Documents/Projects/PresenceSensor/SHS01-enhanced/build/bootloader/gdbinit/connect
